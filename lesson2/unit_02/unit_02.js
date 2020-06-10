@@ -46,7 +46,9 @@ document.querySelector('.b-8').onclick = t8;
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу,  что пользователь ввел в input. Добавьте очистку input после нажатия кнопки.
 
 function t9() {
-
+	let getVal = document.querySelector('.i-9').value;
+	document.querySelector('.out-9').textContent = getVal
+	getVal = ''
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -55,7 +57,8 @@ document.querySelector('.b-9').onclick = t9;
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь умноженное на 10.
 
 function t10() {
-
+	let getVal = +document.querySelector('.i-10').value;
+	document.querySelector('.out-10').textContent = getVal * 10
 }
 
 document.querySelector('.b-10').onclick = t10;
