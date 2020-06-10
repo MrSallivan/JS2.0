@@ -1,41 +1,43 @@
 // Task 1.
 // Создайте две переменные a = 7 и b = 9. Выведите в консоль результа умножения a на b.
+let a = 7, b = 9
+console.log(a * b)
 
 // Task 2.
 // Создайте две переменные c = 7 и d = 9. Выведите на страницу в .out-2 результат деления c на d.
-
-// document.querySelector('.out-2').textContent = 
+let c = 7, d = 9, rez = c / d;
+document.querySelector('.out-2').textContent = rez
 
 // Task 3.
 // Создайте две переменные e = 3 и f = 5. Выведите на страницу  в .out-3 результат сложения e + f.
-
-// document.querySelector('.out-3').textContent = 
+let e = 3, f = 5, rez3 = e + f;
+document.querySelector('.out-3').textContent = rez3
 
 // Task 4.
 // Создайте две переменные e1 = '3' и f1 = 5. Выведите на страницу  в .out-4 результат сложения e1 + f1. Объясните разницу.
-
-// document.querySelector('.out-4').textContent = 
+let e1 = '3', f1 = 5, rez4 = e1 + f1;
+document.querySelector('.out-4').textContent = rez4 // идет конкатинация строк
 
 // Task 5.
 // Создайте две переменные e2 = 3 и f2 = 0. Выведите на страницу  в .out-5 результат деления e2 на f2.
-
-// document.querySelector('.out-5').textContent = 
+let e2 = 3, f2 = 0, rez5 = e2 / f2;
+document.querySelector('.out-5').textContent = rez5
 
 // Task 6.
 // Создайте две переменные e3 = 3 и f3 = 'Hello'. Выведите на страницу  в .out-6 результат сложения двух переменных.
-
-// document.querySelector('.out-6').textContent = 
+let e3 = 3, f3 = 'Hello', rez6 = e3 + f3;
+document.querySelector('.out-6').textContent = rez6
 
 // Task 7.
 // Создайте две переменные e4 = 3 и f4 = 'Hello'. Выведите на страницу  в .out-7 результат умножения двух переменных.
-
-// document.querySelector('.out-7').textContent = 
+let e4 = 3, f4 = 'Hello', rez7 = e4 * f4;
+document.querySelector('.out-7').textContent = rez7
 
 // Task 8.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит в консоль то, что пользователь ввел в input.
 
 function t8() {
-
+	console.log(document.querySelector('.input-8').value)
 }
 
 document.querySelector('.b-8').onclick = t8;
