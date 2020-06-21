@@ -2,25 +2,28 @@
 // При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1 и сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в out-1.
 
 function f1() {
-	let data1 = document.querySelector('.i-1').value
-	if (data1 == 4) {
+	let i1 = document.querySelector('.i-1').value
+	if (i1 == 4) {
 		document.querySelector('.out-1').innerHTML = 'TRUE'
 	} else {
 		document.querySelector('.out-1').innerHTML = 'FALSE'
 	}
 }
 
-document.querySelector('.b-1').onclick = f1;
-
+document.querySelector('.b-1').onclick = f1
 
 // Task 2
 // Даны две переменные a21 и a22. При нажатии кнопки b-2, запускается функция f2. Функция должна сравнить переменные с помощью if else и вывести в out-2 число, которое больше. Вариант равенства переменных не рассматриваем.
 
 let a21 = 45;
-let a22 = 32;
+let a22 = 66;
 
 function f2() {
-
+	if (a21 > a22) {
+		document.querySelector('.out-2').innerHTML = a21
+	} else {
+		document.querySelector('.out-2').innerHTML = a22
+	}
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -31,7 +34,13 @@ document.querySelector('.b-2').onclick = f2;
 //     Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.
 
 function f3() {
-
+	let i13 = +document.querySelector('.i-31').value
+	let i23 = +document.querySelector('.i-32').value
+	if (i13 > i23) {
+		document.querySelector('.out-3').innerHTML = i13;
+	} else {
+		document.querySelector('.out-3').innerHTML = i23;
+	}
 }
 
 document.querySelector('.b-3').onclick = f3;
