@@ -64,7 +64,14 @@ document.querySelector('.b-4').onclick = f4;
 // Task 5. Создайте на странице input[type=number] с классом i-5, куда пользователь может ввести число. Есть кнопка b-5 которая запускает функцию f5. Функция должна вывести в  .out-5 символ m если число меньше нуля, 0 если число равно нулю и 1 если больше.
 
 function f5() {
-
+	let val = +document.querySelector('.i-5').value
+	if (val < 0 && val != 0) {
+		document.querySelector('.out-5').innerHTML = 'm';
+	} else if (val == 0) {
+		document.querySelector('.out-5').innerHTML = 0;
+	} else {
+		document.querySelector('.out-5').innerHTML = 1;
+	}
 }
 
 document.querySelector('.b-5').onclick = f5;
