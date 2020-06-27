@@ -31,7 +31,12 @@ document.querySelector('.p-3').onclick = f3;
 // Task 4. Создайте input(checkbox).i-4 и button.b-4 - при нажатии на кнопку выводите true если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-4
 
 function f4() {
-
+	let myCheckbox = document.querySelector('.i-4').checked
+	if (myCheckbox) {
+		document.querySelector('.out-4').innerHTML = 'true'
+	} else {
+		document.querySelector('.out-4').innerHTML = 'false'
+	}
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -40,7 +45,12 @@ document.querySelector('.b-4').onclick = f4;
 //Создайте input(checkbox).i-5 и button.b-5. Для checkbox добавьте value="task-5" - при нажатии на кнопку b-5 выводите value checkbox если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-5
 
 function f5() {
-
+	let myCheckbox = document.querySelector('.i-5').checked
+	if (myCheckbox) {
+		document.querySelector('.out-5').innerHTML = document.querySelector('.i-5').value
+	} else {
+		document.querySelector('.out-5').innerHTML = 'false'
+	}
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -50,7 +60,10 @@ document.querySelector('.b-5').onclick = f5;
 //Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку выводите value из input в div.out-6
 
 function f6() {
-
+	document.querySelector('.out-6').innerHTML = document.querySelector('.i-6').value
+	setTimeout( () => {
+		document.querySelector('.out-6').innerHTML = ''
+	}, 5000)
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -59,7 +72,14 @@ document.querySelector('.b-6').onclick = f6;
 // Создайте input(password).i-7 и button.b-7 - при нажатии на кнопку выводите в div.out-71 value прописанное в input. В .out-72 выводите 1 если длина пароля больше или равна 6 или 0 если меньше. Для подсчета количества символов в строке используйте length.
 
 function f7() {
-
+	let val = document.querySelector('.i-7').value
+	document.querySelector('.out-71').innerHTML = val
+	let lenIn = val.length
+	if ( lenIn >= 6 ) {
+		document.querySelector('.out-72').innerHTML = 1
+	} else {
+		document.querySelector('.out-72').innerHTML = 0
+	}
 }
 
 document.querySelector('.b-7').onclick = f7;
