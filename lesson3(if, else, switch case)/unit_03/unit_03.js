@@ -153,7 +153,24 @@ document.querySelector('.b-9').onclick = f9;
 //     Дан input i-101 и input-102, type=number.  Дан select s-103, который содержит четыре операции - +, -, *, / . Дана кнопка b-10, при нажатии на которую срабатывает функция f10. Функция выводит в out-10 результат операций выбранной в 3-м select к числам введенным в первом и втором input. Например выбрано 1 13 +, нужно вывести результат 1+13 т.е. 14.
 
 function f10() {
-
+	let val1 = +document.querySelector('.i-101').value
+	let val2 = +document.querySelector('.i-102').value
+	let valSelect = document.querySelector('.s-103').value
+	switch (valSelect) {
+		case '+':
+			document.querySelector('.out-10').innerHTML = val1 + val2;
+			break
+		case '-':
+			document.querySelector('.out-10').innerHTML = val1 - val2;
+			break
+		case '*':
+			document.querySelector('.out-10').innerHTML = val1 * val2;
+			break
+		case '/':
+			document.querySelector('.out-10').innerHTML = val1 / val2;
+			break
+	}
+	
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -163,7 +180,17 @@ document.querySelector('.b-10').onclick = f10;
 //     Дан select s-111 и s-112, каждый из которых содержит 1 и 0.  Дан select s-113, который содержит две операции - && и || . Дана кнопка b-11, при нажатии на которую срабатывает функция f11. Функция выводит в out-11 результат логических операций выбранных в 3 select к числам выбранным в первом и втором select. Например выбрано 1 1 &&,  нужно вывести результат операции 1&&1 т.е. 1 или 0.
 
 function f11() {
-
+	let val1 = +document.querySelector('.s-111').value
+	let val2 = +document.querySelector('.s-112').value
+	let valSelect = document.querySelector('.s-113').value
+	switch (valSelect) {
+		case '&&':
+			document.querySelector('.out-11').innerHTML = val1 && val2;
+			break
+		case '||':
+			document.querySelector('.out-11').innerHTML = val1 || val2;
+			break
+	}
 }
 
 document.querySelector('.b-11').onclick = f11;
