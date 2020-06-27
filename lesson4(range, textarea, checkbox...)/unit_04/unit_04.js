@@ -88,12 +88,12 @@ document.querySelector('.b-7').onclick = f7;
 // Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). Добавьте на созданную кнопку событие клик и запуск функции f81. Функция должна в .out-81 выводить value созданного input.i-81.
 
 function f8() {
+	document.querySelector('.out-8').innerHTML = '<input class="i-81"> <button class = "b-81">Button</button> <br> <div class="out-81"></div>'
+	function f81() {
+		document.querySelector('.out-81').innerHTML = document.querySelector('.i-81').value
+	}
+	document.querySelector('.b-81').onclick = f81
 
-
-    //    вашасозданнаякнопка.onclick = f81;
-    //    function f81 () {
-
-    //    }
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -102,7 +102,12 @@ document.querySelector('.b-8').onclick = f8;
 //Создайте один input(radio).r-9  и button.b-9 - при нажатии на button если radio.r-9 выбран (активен, checked) выводите в .out-9 - value прописанное в r-9, либо 0 если не активен. 
 
 function f9() {
-
+	let checkRadio = document.querySelector('.r-9').checked
+	if (checkRadio) {
+		document.querySelector('.out-9').innerHTML = document.querySelector('.r-9').value
+	} else {
+		document.querySelector('.out-9').innerHTML = 0
+	}
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -112,7 +117,8 @@ document.querySelector('.b-9').onclick = f9;
 
 
 function f10() {
-
+	let color = document.querySelector('.i-10').value
+	document.querySelector('.b-10').style.backgroundColor = color
 }
 
 document.querySelector('.b-10').onclick = f10;
