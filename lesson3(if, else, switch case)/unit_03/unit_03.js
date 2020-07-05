@@ -2,7 +2,7 @@
 // При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1 и сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в out-1.
 
 function f1() {
-	let i1 = document.querySelector('.i-1').value
+	let i1 = +document.querySelector('.i-1').value
 	if (i1 == 4) {
 		document.querySelector('.out-1').innerHTML = 'TRUE'
 	} else {
