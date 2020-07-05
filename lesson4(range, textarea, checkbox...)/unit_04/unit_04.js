@@ -118,7 +118,7 @@ document.querySelector('.b-9').onclick = f9;
 
 function f10() {
 	let color = document.querySelector('.i-10').value
-	document.querySelector('.b-10').style.backgroundColor = color
+	document.querySelector('.out-10').style.backgroundColor = color
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -128,7 +128,8 @@ document.querySelector('.b-10').onclick = f10;
 //   Создайте input(color).i-111 и input(color).i-112- два элемента и button.b-11 - при нажатии на кнопку присвойте цвет из первого input в value второго.
 
 function f11() {
-
+	let val1 = document.querySelector('.i-111').value
+	document.querySelector('.i-112').value = val1
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -137,7 +138,11 @@ document.querySelector('.b-11').onclick = f11;
 //   Создайте input(date).i-12 и button.b-12 - при нажатии на кнопку выводите на в  out-12 выбранное в input время.
 
 function f12() {
-
+	let val12 = document.querySelector('.i-12').value
+	document.querySelector('.out-12').innerHTML = val12
+	document.querySelector('.out-12').style.border = '1px dotted red'
+	document.querySelector('.out-12').style.maxWidth = '10%'
+	document.querySelector('.out-12').style.padding = '10px'
 }
 
 document.querySelector('.b-12').onclick = f12;
