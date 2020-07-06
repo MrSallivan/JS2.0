@@ -21,7 +21,14 @@ document.querySelector('.b-1').onclick = t1;
 // от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла.
 
 function t2() {
-
+	let out = ''
+	for (let i = 1; i <= 122; i++) {
+		if ( (i % 2) !== 0 ) {
+			continue
+		}
+		out += i + ' '
+	}
+	document.querySelector('.out-2').innerHTML = out
 }
 
 document.querySelector('.b-2').onclick = t2;
