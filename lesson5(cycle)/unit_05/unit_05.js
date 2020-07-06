@@ -40,7 +40,11 @@ document.querySelector('.b-2').onclick = t2;
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла.
 
 function t3() {
-
+	let out = ''
+	for (var i = 25; i >=7 ; i--) {
+		out += i + ' '
+	}
+	document.querySelector('.out-3').innerHTML = out
 }
 
 document.querySelector('.b-3').onclick = t3;
