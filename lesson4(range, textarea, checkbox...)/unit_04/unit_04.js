@@ -201,7 +201,8 @@ document.querySelector('.s-17').onchange = f17
 // Создайте select.s-18 и input.i-18. Добавьте на select событие onchange, при наступлении которого запускается функция f18. Функция должна выводить в input i-18 value выбранного в select option.
 
 function f18() {
-
+	let val18 = document.querySelector('.s-18').value
+	document.querySelector('.i-18').value = val18
 }
 
 document.querySelector('.s-18').onchange = f18;
@@ -210,7 +211,9 @@ document.querySelector('.s-18').onchange = f18;
 // Создайте форму. В ней input(text).i-191 и input(password).i-192 - и кнопку button.b-19. По нажатию кнопки выводите значение text и password в out-19 через пробел. Обратите внимание на хитрость. Мы, кнопку сейчас повесили за пределами формы. Чуть позже мы рассмотрим почему это делали.
 
 function f19() {
-
+	let val19 = document.querySelector('.i-191').value
+	let val192 = document.querySelector('.i-192').value
+	document.querySelector('.out-19').innerHTML = `${val19} ${val192}`
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -224,9 +227,10 @@ document.querySelector('.b-19').onclick = f19;
 function f20(e) {
     e.preventDefault(); // чтобы форма не перезагружала страницу!!!!
     let form = document.querySelector('.f-20');
-    console.log(form.elements);
-    console.log(form.elements['username'].value); // так можно обратиться к элементу внутри формы
-
+    let val20 = form.elements.username.value
+    let val21 = form.elements.password.value
+   
+    document.querySelector('.out-20').innerHTML = `${val20} ${val21}`
 }
 
 document.querySelector('.b-20').onclick = f20;
