@@ -5,9 +5,13 @@
 
 
 function t1() {
-
+	let st1 = []
+	for (i = 1; i <= 50; i++) {
+		st1[i] = `${i}`
+	}
+	let str1 = st1.join(' ')
+	document.querySelector('.out-1').innerHTML = str1
 }
-
 document.querySelector('.b-1').onclick = t1;
 
 //  Task 2
