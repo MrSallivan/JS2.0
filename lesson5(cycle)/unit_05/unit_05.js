@@ -11,6 +11,7 @@ function t1() {
 	}
 	let str1 = st1.join(' ')
 	document.querySelector('.out-1').innerHTML = str1
+	console.log(typeof(str1))
 }
 document.querySelector('.b-1').onclick = t1;
 
