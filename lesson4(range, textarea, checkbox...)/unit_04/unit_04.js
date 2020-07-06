@@ -151,16 +151,17 @@ document.querySelector('.b-12').onclick = f12;
 //  Создайте input(range).i-13. При изменении положения ползунка i-13 выводите значение в out-13. Для события используйте oninput.
 
 function f13() {
-
+	document.querySelector('.out-13').innerHTML = document.querySelector('.i-13').value
 }
 
-document.querySelector('.i-13').oninput = f13;
+document.querySelector('.i-13').oninput = f13
 
 // Task 14
 // Создайте text-area.t-14 и button.b-14 - при нажатии на кнопку выводите на в out-14 текст введенный в t-14.
 
 function f14() {
-
+	let val14 = String(document.querySelector('.t-14').value)
+	document.querySelector('.out-14').innerText = val14
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -169,7 +170,9 @@ document.querySelector('.b-14').onclick = f14;
 // Создайте text-area.t-15, input.i-15 и button.b-15 - при нажатии на кнопку выводите текст из input.i-15 в textarea.t-15 и на страницу в out-15.
 
 function f15() {
-
+	let val15 = String(document.querySelector('.i-15').value)
+	document.querySelector('.t-15').innerText = val15
+	document.querySelector('.out-15').innerText = val15
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -179,7 +182,8 @@ document.querySelector('.b-15').onclick = f15;
 
 function f16() {
     // для получения выбранного option просто получите select в переменную и select.value;
-
+    let val16 = document.querySelector('.s-16').value
+    document.querySelector('.out-16').innerHTML = val16
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -188,10 +192,10 @@ document.querySelector('.b-16').onclick = f16;
 // Создайте select.s-17. Добавьте ему событие onchange, при наступлении которого запускается функция f17. Функция должна выводить в out-17 value выбранного в select option.
 
 function f17() {
-
+	document.querySelector('.out-17').innerHTML = document.querySelector('.s-17').value
 }
 
-document.querySelector('.s-17').onchange = f17;
+document.querySelector('.s-17').onchange = f17
 
 // Task 18
 // Создайте select.s-18 и input.i-18. Добавьте на select событие onchange, при наступлении которого запускается функция f18. Функция должна выводить в input i-18 value выбранного в select option.
