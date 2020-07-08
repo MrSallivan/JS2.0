@@ -203,10 +203,9 @@ document.querySelector('.b-10').onclick = t10;
 function t11() {
 	let out = ' '
 	let allDivs = document.querySelectorAll('div.div-11')
-	for (let i = 0; i <= allDivs.length; i++) {
+	for (let i = 0; i < allDivs.length; i++) {
 		out += allDivs[i].innerHTML + ' '
 	}
-	console.log(allDivs[2].innerHTML)
 	document.querySelector('.out-11').innerHTML = out
 }
 
