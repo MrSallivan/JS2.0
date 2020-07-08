@@ -219,6 +219,10 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
+	let allDivs = document.querySelectorAll('div.div-12')
+	for (let i = 0; i < allDivs.length; i++) {
+		allDivs[i].style.background = 'orange'
+	}
 
 }
 
@@ -231,7 +235,10 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
-
+	let allInput = document.querySelectorAll('input.i-13')
+	for (let i = 0; i < allInput.length; i++) {
+		allInput[i].value = i + 1
+	}
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -244,7 +251,12 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+	let allInput = document.querySelectorAll('input.i-14')
+	for (let i = 0; i < allInput.length; i++) {
+		if (allInput[i].checked) {
+			document.querySelector('.out-14').innerHTML = allInput[i].value
+		}
+	}
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -256,7 +268,11 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + ' ' + i
 
 function t15() {
-
+	let out = ''
+	for (let i = 0; i <= 10; i++) {
+		out += (10 - i) + ' ' + i + ' '
+	}
+	document.querySelector('.out-15').innerHTML = out
 }
 
 document.querySelector('.b-15').onclick = t15;
