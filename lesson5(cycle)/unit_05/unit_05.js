@@ -11,7 +11,7 @@ function t1() {
 	}
 	let str1 = st1.join(' ')
 	document.querySelector('.out-1').innerHTML = str1
-	console.log(typeof(str1))
+	console.log(typeof (str1))
 }
 document.querySelector('.b-1').onclick = t1;
 
@@ -23,7 +23,7 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
 	let out = ''
 	for (let i = 1; i <= 122; i++) {
-		if ( (i % 2) !== 0 ) {
+		if ((i % 2) !== 0) {
 			continue
 		}
 		out += i + ' '
@@ -41,7 +41,7 @@ document.querySelector('.b-2').onclick = t2;
 
 function t3() {
 	let out = ''
-	for (var i = 25; i >=7 ; i--) {
+	for (let i = 25; i >= 7; i--) {
 		out += i + ' '
 	}
 	document.querySelector('.out-3').innerHTML = out
@@ -56,7 +56,11 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
-
+	let out = ''
+	for (let i = 77; i >= 35; i = i - 3) {
+		out += i + '_'
+	}
+	document.querySelector('.out-4').innerHTML = out
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -68,7 +72,15 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
-
+	let out = ''
+	for (let i = 1; i <= 17; i++) {
+		if ((i % 2) !== 0) {
+			out += i + '_*'
+		} else {
+			out += i + '_**'
+		}
+	}
+	document.querySelector('.out-5').innerHTML = out
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -83,7 +95,13 @@ document.querySelector('.b-5').onclick = t5;
 // Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
 
 function t6() {
+	let innerNumber = +document.querySelector('.i-6').value
+	let out = ''
 
+	for (let i = 0; i < innerNumber; i++) {
+		out += '******' + '<br/>'
+	}
+	document.querySelector('.out-6').innerHTML = out
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -97,7 +115,12 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла.
 
 function t7() {
-
+	let innerNumber = +document.querySelector('.i-7').value
+	let out = ' '
+	for (let i = innerNumber; i >= 0; i--) {
+		out += i + " "
+	}
+	document.querySelector('.out-7').innerHTML = out
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -112,7 +135,13 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла.
 
 function t8() {
-
+	let out = ' '
+	let num1 = +document.querySelector('.i-81').value
+	let num2 = +document.querySelector('.i-82').value
+	for (let i = num1; i <= num2; i++) {
+		out += i + ' '
+	}
+	document.querySelector('.out-8').innerHTML = out
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -129,7 +158,20 @@ document.querySelector('.b-8').onclick = t8;
 // цикл - один
 
 function t9() {
-
+	let out = ' '
+	let num1 = +document.querySelector('.i-91').value
+	let num2 = +document.querySelector('.i-92').value
+	if (num1 > num2) {
+		for (let i = num2; i <= num1; i++) {
+			out += i + ' '
+		}
+		document.querySelector('.out-9').innerHTML = out
+	} else {
+		for (let i = num1; i <= num2; i++) {
+			out += i + ' '
+		}
+		document.querySelector('.out-9').innerHTML = out
+	}
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -140,7 +182,11 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+	let out = ''
+	for (let i = 1950; (i >= 1950) && (i <= 2000); i += 2) {
+		out += i + " "
+	}
+	document.querySelector('.out-10').innerHTML = out
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -155,7 +201,13 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
-
+	let out = ' '
+	let allDivs = document.querySelectorAll('div.div-11')
+	for (let i = 0; i <= allDivs.length; i++) {
+		out += allDivs[i].innerHTML + ' '
+	}
+	console.log(allDivs[2].innerHTML)
+	document.querySelector('.out-11').innerHTML = out
 }
 
 document.querySelector('.b-11').onclick = t11;
