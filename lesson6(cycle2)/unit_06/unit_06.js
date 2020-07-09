@@ -31,7 +31,16 @@ document.querySelector('.b-1').onclick = t1;
 // </pre>
 // <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит цифры и перенос строки br, , второй звездочки, знак подчеркивания и знак переноса.</p>
 function t2() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-2')
+	for (let i = 0; i < 3; i++) {
+		out += (i + 1) + '<br/>'
+		for (let k = 0; k < 3; k++) {
+			out += '*_'
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-2').onclick = t2;
