@@ -75,7 +75,16 @@ document.querySelector('.b-3').onclick = t3;
 // 1_1 2 3 4 5 2_1 2 3 4 5 3_1 2 3 4 5
 // </pre>
 function t4() {
+	let out = ''
+	let outTask = document.querySelector('.out-4')
+	for (let i = 0; i < 3; i++) {
+		out += (i + 1) + '_'
+		for (let k = 0; k <= 4; k++) {
+			out += (k + 1) + ' '
+		}
 
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-4').onclick = t4;
