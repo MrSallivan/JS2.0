@@ -56,7 +56,15 @@ document.querySelector('.b-2').onclick = t2;
 // </pre>
 // <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит перенос строки br,  внутренний -  звездочки, знак подчеркивания.</p>
 function t3() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-3')
+	for (let i = 0; i < 4; i++) {
+		for (let k = 0; k < 3; k++) {
+			out += '*_'
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-3').onclick = t3;
