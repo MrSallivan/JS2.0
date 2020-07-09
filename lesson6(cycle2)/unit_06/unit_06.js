@@ -99,7 +99,19 @@ document.querySelector('.b-4').onclick = t4;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1.</p>
 function t5() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-5')
+	for (let i = 0; i < 3; i++) {
+		for (let k = 1; k <= 6; k++) {
+			if ((k % 2) !== 0) {
+				out += '1'
+			} else {
+				out += "0"
+			}
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-5').onclick = t5;
