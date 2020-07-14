@@ -130,13 +130,13 @@ function t6() {
 	let outTask = document.querySelector('.out-6')
 	for (let i = 0; i < 3; i++) {
 		for (let k = 1; k <= 6; k++) {
-			if ((k % 2) !== 0) {
-				out += '1'
-			} if ((k % 2) == 0) {
-				out += "0"
-			} if ((k % 2 !== 0) || (k % 2 == 0)) {
+			if ((k / 3 == 1) || (k / 3 == 2)) {
 				out += 'x'
-			}
+			} if ((k / 2 == 1) || (k /2 == 2)) {
+				out += '0'
+			} if ( (k == 1) || (k / 5 == 1)) {
+				out += "1"
+			} 
 		}
 		out += '<br/>'
 	}
@@ -156,7 +156,15 @@ document.querySelector('.b-6').onclick = t6;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл запускается от нуля до i и рисует звездочку.</p>
 function t7() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-7')
+	for ( i = 0; i < 5; ++i) {
+		for ( k = 0; k < i; k++) {
+			out += '*'
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-7').onclick = t7;
