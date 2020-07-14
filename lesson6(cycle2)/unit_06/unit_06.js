@@ -209,11 +209,31 @@ document.querySelector('.b-8').onclick = t8;
 function t9() {
 	let out = ''
 	let outTask = document.querySelector('.out-9')
-	for ( i = 0; i < 5 ; i++) {
-		for ( k = i; k < 5; ) {
-			out += k + ' '
+	let outIn = ''
+	for ( let i = 0; i < 5; i++ ) {
+		if (i == 0 ) {
+			for (let k = 1; k < 2; k++) {
+			outIn += k + ' '
 		}
-		out += '<br/>'
+	}
+		if (i == 1 ) {
+			for (let k = 2; k < 3; k++) {
+			outIn += k + ' '
+		}}
+		if (i == 2 ) {
+			for (let k = 3; k < 4; k++) {
+			outIn += k + ' '
+		}}
+		if (i == 3 ) {
+			for (let k = 4; k < 5; k++) {
+			outIn += k + ' '
+		}}
+		if (i == 4 ) {
+			for (let k = 5; k < 6; k++) {
+			outIn += k + ' '
+			}
+		}
+		out += outIn + '<br />'
 	}
 	outTask.innerHTML = out
 }
