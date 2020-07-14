@@ -181,8 +181,17 @@ document.querySelector('.b-7').onclick = t7;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
 function t8() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-8')
+	for ( i = 4; (i < 5) && ( i >= 0); i--) {
+		for ( k = i; (k < 6) && ( k >= 0 ); k--) {
+			out += '*'
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
+
 
 document.querySelector('.b-8').onclick = t8;
 
@@ -198,7 +207,15 @@ document.querySelector('.b-8').onclick = t8;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
 function t9() {
-
+	let out = ''
+	let outTask = document.querySelector('.out-9')
+	for ( i = 0; i < 5 ; i++) {
+		for ( k = i; k < 5; ) {
+			out += k + ' '
+		}
+		out += '<br/>'
+	}
+	outTask.innerHTML = out
 }
 
 document.querySelector('.b-9').onclick = t9;
