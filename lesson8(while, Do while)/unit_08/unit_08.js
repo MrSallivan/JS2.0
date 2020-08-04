@@ -131,7 +131,17 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла  while.
 
 function t7() {
+	let i = 0
+	let p = +document.querySelector('.i-7').value
+	let rez = ''
+	let numIt = +document.querySelector('.i-7').value
+	while (i <= numIt) {
+		rez = rez + p + ' '
+		i++
+		p--
 
+	}
+	document.querySelector('.out-7').innerHTML = rez
 }
 
 document.querySelector('.b-7').onclick = t7;
