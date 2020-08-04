@@ -300,7 +300,16 @@ document.querySelector('.b-14').onclick = t14;
 // Для вывода использовать цикл  while. Разделитель пробел.
 
 function t15() {
+	let i = 10
+	let b = 0
+	let rez = ''
+	while ((i <= 10) && (b <= 10)) {
+		rez += i + ' ' + b + ' '
+		b++
+		i--
+	}
 
+	document.querySelector('.out-15').innerHTML = rez
 }
 
 document.querySelector('.b-15').onclick = t15;
