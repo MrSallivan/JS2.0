@@ -227,7 +227,14 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
-
+	let div = document.querySelectorAll('div.div-11')
+	let i = 0
+	let rez = ''
+	while (i < div.length) {
+		rez = rez + div[i].innerHTML + ' '
+		i++
+	}
+	document.querySelector('.out-11').innerHTML = rez
 }
 
 document.querySelector('.b-11').onclick = t11;
