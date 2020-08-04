@@ -180,7 +180,22 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
 function t9() {
-
+	let i = 0
+	let p1 = +document.querySelector('.i-91').value
+	let rez = ''
+	let p2 = +document.querySelector('.i-92').value
+	if (p1 < p2) {
+		while (p1 <= p2) {
+			rez = rez + p1 + ' '
+			p1++
+		}
+	} else {
+		while (p1 >= p2) {
+			rez = rez + p2 + ' '
+			p2++
+		}
+	}
+	document.querySelector('.out-9').innerHTML = rez
 }
 
 document.querySelector('.b-9').onclick = t9;
