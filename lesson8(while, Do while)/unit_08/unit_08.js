@@ -61,7 +61,13 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
-
+	let i = 80
+	let rez = ''
+	while (i > 35) {
+		i = i - 3
+		rez += i + "_"
+	}
+	document.querySelector('.out-4').innerHTML = rez
 }
 
 document.querySelector('.b-4').onclick = t4;
