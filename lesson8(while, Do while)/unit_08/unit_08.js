@@ -282,7 +282,14 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+	let div = document.querySelectorAll('input.i-14')
+	let i = 0
+	while (i < div.length) {
+		if (div[i].checked) {
+			document.querySelector('.out-14').innerHTML = div[i].value
+		}
+		i++
+	}
 }
 
 document.querySelector('.b-14').onclick = t14;
