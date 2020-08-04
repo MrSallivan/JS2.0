@@ -132,11 +132,11 @@ function t6() {
 		for (let k = 1; k <= 6; k++) {
 			if ((k / 3 == 1) || (k / 3 == 2)) {
 				out += 'x'
-			} if ((k / 2 == 1) || (k /2 == 2)) {
+			} if ((k / 2 == 1) || (k / 2 == 2)) {
 				out += '0'
-			} if ( (k == 1) || (k / 5 == 1)) {
+			} if ((k == 1) || (k / 5 == 1)) {
 				out += "1"
-			} 
+			}
 		}
 		out += '<br/>'
 	}
@@ -158,8 +158,8 @@ document.querySelector('.b-6').onclick = t6;
 function t7() {
 	let out = ''
 	let outTask = document.querySelector('.out-7')
-	for ( i = 0; i < 5; ++i) {
-		for ( k = 0; k < i; k++) {
+	for (i = 0; i < 5; ++i) {
+		for (k = 0; k < i; k++) {
 			out += '*'
 		}
 		out += '<br/>'
@@ -183,8 +183,8 @@ document.querySelector('.b-7').onclick = t7;
 function t8() {
 	let out = ''
 	let outTask = document.querySelector('.out-8')
-	for ( i = 4; (i < 5) && ( i >= 0); i--) {
-		for ( k = i; (k < 6) && ( k >= 0 ); k--) {
+	for (i = 4; (i < 5) && (i >= 0); i--) {
+		for (k = i; (k < 6) && (k >= 0); k--) {
 			out += '*'
 		}
 		out += '<br/>'
@@ -210,27 +210,30 @@ function t9() {
 	let out = ''
 	let outTask = document.querySelector('.out-9')
 	let outIn = ' '
-	for ( let i = 0; i < 5; i++ ) {
-		if (i == 0 ) {
+	for (let i = 0; i < 5; i++) {
+		if (i == 0) {
 			for (let k = 1; k < 2; k++) {
-			outIn += k + ' '
+				outIn += k + ' '
+			}
 		}
-	}
-		if (i == 1 ) {
+		if (i == 1) {
 			for (let k = 2; k < 3; k++) {
-			outIn += k + ' '
-		}}
-		if (i == 2 ) {
+				outIn += k + ' '
+			}
+		}
+		if (i == 2) {
 			for (let k = 3; k < 4; k++) {
-			outIn += k + ' '
-		}}
-		if (i == 3 ) {
+				outIn += k + ' '
+			}
+		}
+		if (i == 3) {
 			for (let k = 4; k < 5; k++) {
-			outIn += k + ' '
-		}}
-		if (i == 4 ) {
+				outIn += k + ' '
+			}
+		}
+		if (i == 4) {
 			for (let k = 5; k < 6; k++) {
-			outIn += k + ' '
+				outIn += k + ' '
 			}
 		}
 		out += outIn + '<br />'
@@ -257,38 +260,39 @@ function t10() {
 	let out, outIn, outIn1, outIn2, outIn3, outIn4 = ' ';
 	for (let i = 0; i < 5; i++) {
 		if (i == 0) {
-			for ( let k = 1; k < 11; k++) {
-				if (k < 10 ) {
+			for (let k = 1; k < 11; k++) {
+				if (k < 10) {
 					outIn += '0' + k + ' '
-				} 
+				}
 				if (k == 10) {
-				outIn += k + ' '
+					outIn += k + ' '
 				}
 			}
 		}
 		if (i == 1) {
-			for ( let k = 11; k < 21; k++) {
-					outIn1 += k + ' '
+			for (let k = 11; k < 21; k++) {
+				outIn1 += k + ' '
 			}
 		}
 		if (i == 2) {
-			for ( let k = 21; k < 31; k++) {
-					outIn2 += k + ' '
-				}
+			for (let k = 21; k < 31; k++) {
+				outIn2 += k + ' '
 			}
+		}
 		if (i == 3) {
-			for ( let k = 31; k < 41; k++) {
-					outIn3 += k + ' '
-				} 
+			for (let k = 31; k < 41; k++) {
+				outIn3 += k + ' '
+			}
 		}
 		if (i == 4) {
-			for ( let k = 41; k < 51; k++) {
-					outIn4 += k + ' '
+			for (let k = 41; k < 51; k++) {
+				outIn4 += k + ' '
+			}
 		}
 	}
-	}
-	// out = outIn + '<br />' + outIn1 + '<br />' + outIn2 +'<br />' + outIn3 + '<br />' + outIn4 + '<br />'
-	outTask.innerHTML = outIn + '<br />' + outIn1 + '<br />' + outIn2 +'<br />' + outIn3 + '<br />' + outIn4 + '<br />'
+
+	outTask.innerHTML = outIn + '<br />' + outIn1 + '<br />' + outIn2 + '<br />' + outIn3 + '<br />' + outIn4 + '<br />'
 }
 
 document.querySelector('.b-10').onclick = t10;
+//НЕ ПОНИМАЮ ПОЧЕМУ ВНАЧАЛЕ ВЫПАДАЕТ undefined
