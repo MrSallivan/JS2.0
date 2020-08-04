@@ -156,7 +156,15 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла  while.
 
 function t8() {
-
+	let i = 0
+	let p1 = +document.querySelector('.i-81').value
+	let rez = ''
+	let p2 = +document.querySelector('.i-82').value
+	while (p1 <= p2) {
+		rez = rez + p1 + ' '
+		p1++
+	}
+	document.querySelector('.out-8').innerHTML = rez
 }
 
 document.querySelector('.b-8').onclick = t8;
