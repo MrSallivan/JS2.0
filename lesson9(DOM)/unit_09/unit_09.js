@@ -44,8 +44,16 @@ document.querySelector('.b-4').onclick = f4;
 // По нажатию b-5 запускайте функцию f5, которая проверяет наличие класса bg-4 у блока out-4 (да, именно bg-4 у out-4 ). Результат - true или false, выводите в out-5.
 
 function f5() {
-	
+	let out4 = document.querySelector('div.out-4').classList
+
+	if (out4.value == 'out-4 bg-4') {
+		document.querySelector('.out-5').innerHTML = true
+	} else {
+		document.querySelector('.out-5').innerHTML = false
+	}
+
 }
+
 
 document.querySelector('.b-5').onclick = f5;
 
@@ -66,7 +74,7 @@ document.querySelector('.b-6').onclick = f6;
 let blocks7 = document.querySelectorAll('.out-7');
 
 function f7() {
-    //внутри цикла blocks7[i].classList....
+	//внутри цикла blocks7[i].classList....
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -78,7 +86,7 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-    //внутри цикла blocks8[i].classList....
+	//внутри цикла blocks8[i].classList....
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -88,13 +96,13 @@ document.querySelector('.b-8').onclick = f8;
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 function f9() {
-    //this.classList...  // все решается одной строкой
+	//this.classList...  // все решается одной строкой
 }
 
 let div9 = document.querySelectorAll('.out-9');
 
 for (let i = 0; i < div9.length; i++) {
-    div9[i].onclick = f9;
+	div9[i].onclick = f9;
 }
 
 
@@ -139,7 +147,7 @@ function f13() {
 }
 
 function f13_1() {
-    document.querySelector('.out-13-1').innerHTML += this.innerHTML;
+	document.querySelector('.out-13-1').innerHTML += this.innerHTML;
 }
 
 
