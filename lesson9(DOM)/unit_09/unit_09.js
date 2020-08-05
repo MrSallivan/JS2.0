@@ -63,7 +63,6 @@ document.querySelector('.b-5').onclick = f5;
 
 function f6() {
 	const p6 = document.querySelectorAll('p.p-6')
-	console.log(p6)
 	document.querySelector('.out-6').innerHTML = `Кол-во параграфов .p-6: ${p6.length}`
 }
 
