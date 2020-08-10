@@ -229,7 +229,9 @@ document.querySelector('.b-17').onclick = f17;
 // Добавьте кнопку .b-18, которая запускает функцию f18. Функция с помощью getAttribute получает data-b атрибут с параграф p-18 и выводит в out-18.
 
 function f18() {
-
+	let p18 = document.querySelector('.p-18')
+	let dataP18 = p18.getAttribute('data-b')
+	document.querySelector('.out-18').innerHTML = dataP18
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -238,7 +240,14 @@ document.querySelector('.b-18').onclick = f18;
 // Добавьте кнопку .b-19, которая запускает функцию f19. Функция с помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит в out-19 через пробел. Обратите внимание, что элементов p-19 больше одного.
 
 function f19() {
-
+	let p19 = document.querySelectorAll('.p-19')
+	let i = 0;
+	let atrs19 = ''
+	while ( i < p19.length ) {
+		atrs19 += p19[i].getAttribute('data-b') + ' '
+		i++
+	}
+	document.querySelector('.out-19').innerHTML = atrs19
 }
 
 document.querySelector('.b-19').onclick = f19;
