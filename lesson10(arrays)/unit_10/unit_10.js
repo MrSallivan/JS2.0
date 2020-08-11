@@ -298,15 +298,12 @@ function f16() {
 	ar16_odd = []
 	ar16_even = []
 
-	for (let i = 0; i < ar16.length; i++) {
-		if (((ar16[i] % 2) == 0) || (i == 0)) {
-			for (let k = i; k = i; k++) {
-				ar16_even[k] = ar16[i]
-			}
-		} else if ((ar16[i] % 2) !== 0) {
-			for (let j = i; j = i; j++) {
-				ar16_odd[j] = ar16[i]
-			}
+	for (let i = 0; i < ar16.length; i++ ) {
+		let val = ar16[i]
+		if ( val % 2 == 0 ) {
+			ar16_even[ar16_even.length] = val + ' '
+		} else if ( val % 2 !== 0 ) {
+				ar16_odd[ar16_odd.length] = val + ' '
 		}
 	}
 	document.querySelector('.out-16-odd').innerHTML = ar16_odd
