@@ -4,8 +4,8 @@
 let ar1 = ['abr', 23, true]
 
 function f1() {
-    //ваш_элемент.innerHTML = ar1; // да так можно выводить!!!!
-    document.querySelector('.out-1').innerHTML = ar1
+	//ваш_элемент.innerHTML = ar1; // да так можно выводить!!!!
+	document.querySelector('.out-1').innerHTML = ar1
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -15,12 +15,14 @@ document.querySelector('.b-1').onclick = f1;
 
 // let ar2 = // переменную обьявляем здесь!!!!
 
+let ar2 = ['lol', 'hello', 23, 34, true, false]
+
 function f2() {
-    // let out = '';
-    // for (let i = 0; i < ar2.length; i++) {
-    //     out +=arr2[i]+' ';
-    // }
-    // document.querySelector('.out-2').innerHTML = out;
+	let out = '';
+	for (let i = 0; i < ar2.length; i++) {
+		out += ar2[i] + ' ';
+	}
+	document.querySelector('.out-2').innerHTML = out;
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -31,9 +33,11 @@ document.querySelector('.b-2').onclick = f2;
 // Вывод в out-3
 // Тест допустим массив [1,2,3] вывод - 3
 
-// let ar3 =  // переменную обьявляем здесь!!!!
+let ar3 = [1, 2, 3, 4, 5, 'lol', 7]
 
 function f3() {
+	document.querySelector('.out-3').innerHTML = ar3.length
+
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -45,9 +49,20 @@ document.querySelector('.b-3').onclick = f3;
 // Вывод в out-4
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
-// let ar4 =  // переменную обьявляем эту здесь!!!!
+let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 function f4() {
+	let out = ''
+	for (let i = 0; i < ar4.length; i++) {
+		if (i == 0) {
+			out += ar4[i] + ' '
+		} else if (i == 3) {
+			out += ar4[i] + ' '
+		} else if (i == 8) {
+			out += ar4[i] + ' '
+		}
+		document.querySelector('.out-4').innerHTML = out
+	}
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -59,9 +74,12 @@ document.querySelector('.b-4').onclick = f4;
 // Вывод в out-5
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 8
 
-// let ar5 =
+let ar5 = [1, 2, 3, 6, 5, 6, 7, 8, 9, 10]
 
 function f5() {
+	let sum = 0
+	sum = ar5[0] + ar5[2] + ar5[3]
+	document.querySelector('.out-5').innerHTML = sum
 }
 
 document.querySelector('.b-5').onclick = f5;
