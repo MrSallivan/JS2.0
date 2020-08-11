@@ -342,7 +342,13 @@ document.querySelector('.b-17').onclick = f17;
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
 function f18() {
-
+	let rez = ar18[0]
+	for (var i = 0; i < ar18.length; i++) {
+		if ( ar18[i] > rez ) {
+			rez = ar18[i]
+		}
+	}
+	document.querySelector('.out-18').innerHTML = rez
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -357,7 +363,20 @@ document.querySelector('.b-18').onclick = f18;
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
-
+	let rez = ar19[0]
+	for (var i = 0; i < ar19.length; i++) {
+		if ( ar19[i] < rez ) {
+			rez = ar19[i]
+		}
+	}
+	let b = 0
+	while ( b < ar19.length ) {
+		if ( rez == ar19[b] ) {
+			document.querySelector('.out-19').innerHTML = b
+		}
+		b++
+	}
+	
 }
 
 document.querySelector('.b-19').onclick = f19;
