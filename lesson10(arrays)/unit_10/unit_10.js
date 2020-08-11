@@ -295,7 +295,22 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
+	ar16_odd = []
+	ar16_even = []
 
+	for (let i = 0; i < ar16.length; i++) {
+		if (((ar16[i] % 2) == 0) || (i == 0)) {
+			for (let k = i; k = i; k++) {
+				ar16_even[k] = ar16[i]
+			}
+		} else if ((ar16[i] % 2) !== 0) {
+			for (let j = i; j = i; j++) {
+				ar16_odd[j] = ar16[i]
+			}
+		}
+	}
+	document.querySelector('.out-16-odd').innerHTML = ar16_odd
+	document.querySelector('.out-16-even').innerHTML = ar16_even
 }
 
 document.querySelector('.b-16').onclick = f16;
