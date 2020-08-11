@@ -134,6 +134,15 @@ document.querySelector('.b-7').onclick = f7;
 let ar8 = [];
 
 function f8() {
+	ar8[3] = 3.14
+	ar8[4] = 17
+	ar8[6] = 5
+	let out = ''
+	for (i = 0; i < ar8.length; i++) {
+		out += ar8[i] + '-'
+	}
+	document.querySelector('.out-8').innerHTML = out
+	document.querySelector('.out-8-1').innerHTML = `длинна массива равна: ${ar8.length}`
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -147,6 +156,7 @@ document.querySelector('.b-8').onclick = f8;
 let ar9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+	document.querySelector('.out-9').innerHTML = ar9[ar9.length - 1]
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -160,6 +170,9 @@ document.querySelector('.b-9').onclick = f9;
 let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
+	let out = 0
+	out = ar10[1] + ar10[ar10.length - 1]
+	document.querySelector('.out-10').innerHTML = out
 }
 
 document.querySelector('.b-10').onclick = f10;
