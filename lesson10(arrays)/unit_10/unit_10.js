@@ -90,9 +90,14 @@ document.querySelector('.b-5').onclick = f5;
 // Вывод - по нажатию кнопки b-6
 // Вывод в out-6
 
-// let ar6 =
+let ar6 = ['Alex', 'Телец', '05', 'Май']
 
 function f6() {
+	let out = ''
+	for (i = 0; i < ar6.length; i++) {
+		out += ar6[i] + ' '
+	}
+	document.querySelector('.out-6').innerHTML = out
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -106,6 +111,15 @@ document.querySelector('.b-6').onclick = f6;
 let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
+	ar7[5] = 'italy'
+	ar7[6] = 'turkey'
+	ar7[7] = 'vietnam'
+	let out = ''
+	for (i = 0; i < ar7.length; i++) {
+		out += ar7[i] + ' '
+	}
+	document.querySelector('.out-7').innerHTML = out
+
 }
 
 document.querySelector('.b-7').onclick = f7;
