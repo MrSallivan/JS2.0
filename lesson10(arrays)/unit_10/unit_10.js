@@ -188,7 +188,14 @@ document.querySelector('.b-10').onclick = f10;
 let ar11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+	let elem = ar11[2]
+	ar11[2] = ar11[4]
+	ar11[4] = elem
+	let out = ''
+	for (i = 0; i < ar11.length; i++) {
+		out += ar11[i] + ' '
+	}
+	document.querySelector('.out-11').innerHTML = out
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -203,7 +210,15 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
-
+	let elem = ar12[0]
+	let last = ar12.length - 1
+	ar12[0] = ar12[last]
+	ar12[last] = elem
+	let out = ''
+	for (i = 0; i < ar12.length; i++) {
+		out += ar12[i] + ' '
+	}
+	document.querySelector('.out-12').innerHTML = out
 }
 
 document.querySelector('.b-12').onclick = f12;
