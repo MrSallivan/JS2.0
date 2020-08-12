@@ -211,7 +211,13 @@ document.querySelector('.b-12').onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
-
+	let newArray = []
+	let b = 0
+	for (let i = d13.length - 1; i >= 0; i--) {
+		newArray[b] = d13[i]
+		b++
+	}
+	d13 = newArray
 	showArr('.out-13', d13);
 }
 
