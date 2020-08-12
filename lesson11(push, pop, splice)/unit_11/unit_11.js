@@ -190,10 +190,13 @@ function f12() {
 	let poz = 0
 	for (let i = 0; i < d12.length; i++) {
 		if (val == d12[i]) {
-
+			poz = i
+			document.querySelector('.out-12').innerHTML = poz
+			break
 		}
-
+		document.querySelector('.out-12').innerHTML = -1
 	}
+
 }
 
 document.querySelector('.b-12').onclick = f12;
