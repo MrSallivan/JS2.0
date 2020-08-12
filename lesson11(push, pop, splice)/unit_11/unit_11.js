@@ -133,7 +133,12 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
-
+	let emptyArray = []
+	let sizeArray = d9.length
+	for (let i = 0; i < sizeArray - 1; i++) {
+		emptyArray[i] = d9[i + 1]
+	}
+	d9 = emptyArray
 	showArr('.out-9', d9);
 }
 
@@ -148,7 +153,7 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-
+	d10.reverse()
 	showArr('.out-10', d10);
 }
 
@@ -164,7 +169,9 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+	let val = +document.querySelector('.i-11').value
+	let index = d11.indexOf(val)
+	document.querySelector('.out-11').innerHTML = index
 }
 
 document.querySelector('.b-11').onclick = f11;
