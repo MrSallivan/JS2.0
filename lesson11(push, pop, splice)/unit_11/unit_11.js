@@ -186,7 +186,14 @@ document.querySelector('.b-11').onclick = f11;
 let d12 = [6, 62, 60, 70, 1, 5];
 
 function f12() {
+	let val = +document.querySelector('.i-12').value
+	let poz = 0
+	for (let i = 0; i < d12.length; i++) {
+		if (val == d12[i]) {
 
+		}
+
+	}
 }
 
 document.querySelector('.b-12').onclick = f12;
