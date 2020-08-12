@@ -59,7 +59,8 @@ document.querySelector('.b-4').onclick = f4;
 // функция выполняется при нажатии кнопки b-5
 
 function f5() {
-
+	let val = document.querySelector('.i-5').value
+	d1.unshift(val)
 	showArr('.out-5', d1);
 }
 
@@ -74,11 +75,13 @@ document.querySelector('.b-5').onclick = f5;
 let d6 = ['test', 5, 12];
 
 function f6() {
-
+	let val = document.querySelector('.i-6').value
+	d6[d6.length] = val
 	showArr('.out-6', d6);
 }
 
 document.querySelector('.b-6').onclick = f6;
+
 
 // Task 7
 // Напишите функцию f7, которая эмулирует метод pop, т.е. удаляет последний элемент массива d7. Эмулировать - получать результат аналогичный pop, но без применения pop. Функция может быть вызвана много раз, при этом каждый раз должен удаляться последний элемент d7.
@@ -89,7 +92,11 @@ document.querySelector('.b-6').onclick = f6;
 let d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-
+	let emptyArray = []
+	for (let i = 0; i < d7.length - 1; i++) {
+		emptyArray[i] = d7[i]
+	}
+	d7 = emptyArray
 	showArr('.out-7', d7);
 }
 
