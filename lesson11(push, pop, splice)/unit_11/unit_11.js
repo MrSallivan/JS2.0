@@ -111,7 +111,14 @@ document.querySelector('.b-7').onclick = f7;
 let d8 = [2, '4', 12, 67, 'hello'];
 
 function f8() {
-
+	let emptyArray = []
+	let sizeArray = d8.length
+	let val = document.querySelector('.i-8').value
+	emptyArray[0] = val
+	for (let i = 0; i < sizeArray; i++) {
+		emptyArray[i + 1] = d8[i]
+	}
+	d8 = emptyArray
 	showArr('.out-8', d8);
 }
 
