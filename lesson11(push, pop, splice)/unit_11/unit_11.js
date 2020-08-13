@@ -233,7 +233,11 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
-
+	d14 = []
+	let val = +document.querySelector('.i-14').value
+	for (let i = 0; i < val; i++) {
+		d14.push(1)
+	}
 	showArr('.out-14', d14);
 }
 
