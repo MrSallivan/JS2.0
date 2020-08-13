@@ -316,7 +316,9 @@ document.querySelector('.b-17').onclick = f17;
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
 function f18() {
-
+	let val = document.querySelector('.i-18').value
+	let inc = d18.includes(val)
+	document.querySelector('.out-18').innerHTML = inc
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -332,7 +334,14 @@ let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged'
 let maxString = '';
 
 function f19() {
-
+	let ferst = d19[0]
+	for (let i = 0; i < d19.length; i++) {
+		if (ferst.length < d19[i].length) {
+			ferst = d19[i]
+		}
+	}
+	maxString = ferst
+	document.querySelector('.out-19').innerHTML = maxString
 }
 
 document.querySelector('.b-19').onclick = f19;
