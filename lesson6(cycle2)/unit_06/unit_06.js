@@ -209,35 +209,17 @@ document.querySelector('.b-8').onclick = t8;
 function t9() {
 	let out = ''
 	let outTask = document.querySelector('.out-9')
-	let outIn = ' '
+	let s = 1
+	let strr = ''
 	for (let i = 0; i < 5; i++) {
-		if (i == 0) {
-			for (let k = 1; k < 2; k++) {
-				outIn += k + ' '
+		for (var k = 6; k >= 1; k--) {
+			if (k == s) {
+				strr += s + ' '
 			}
 		}
-		if (i == 1) {
-			for (let k = 2; k < 3; k++) {
-				outIn += k + ' '
-			}
+		out += strr + '<br />'
+		s = s + 1
 		}
-		if (i == 2) {
-			for (let k = 3; k < 4; k++) {
-				outIn += k + ' '
-			}
-		}
-		if (i == 3) {
-			for (let k = 4; k < 5; k++) {
-				outIn += k + ' '
-			}
-		}
-		if (i == 4) {
-			for (let k = 5; k < 6; k++) {
-				outIn += k + ' '
-			}
-		}
-		out += outIn + '<br />'
-	}
 	outTask.innerHTML = out
 }
 
@@ -257,42 +239,21 @@ document.querySelector('.b-9').onclick = t9;
 // <p>Вложенный цикл рисует цифры от 0 до 9. Обратите внимание, что первый ряд - есть ведущий нуль. Здесь все просто - проверили, если число меньше 10 - то конкатенируем нуль.</p>
 function t10() {
 	let outTask = document.querySelector('.out-10');
-	let out, outIn, outIn1, outIn2, outIn3, outIn4 = ' ';
+	let out = ''
+	let s = 1
+	let strr = ''
 	for (let i = 0; i < 5; i++) {
-		if (i == 0) {
-			for (let k = 1; k < 11; k++) {
-				if (k < 10) {
-					outIn += '0' + k + ' '
-				}
-				if (k == 10) {
-					outIn += k + ' '
-				}
+		for (var k = 1; k < 11; k++) {
+			if ( i == 0 && k < 10 ) {
+				strr += '0' + k + ' '
+			} else {
+			strr += (i * 10) + k + ' '
 			}
 		}
-		if (i == 1) {
-			for (let k = 11; k < 21; k++) {
-				outIn1 += k + ' '
-			}
+		strr += '</br>'
+		
 		}
-		if (i == 2) {
-			for (let k = 21; k < 31; k++) {
-				outIn2 += k + ' '
-			}
-		}
-		if (i == 3) {
-			for (let k = 31; k < 41; k++) {
-				outIn3 += k + ' '
-			}
-		}
-		if (i == 4) {
-			for (let k = 41; k < 51; k++) {
-				outIn4 += k + ' '
-			}
-		}
+	outTask.innerHTML = strr
 	}
 
-	outTask.innerHTML = outIn + '<br />' + outIn1 + '<br />' + outIn2 + '<br />' + outIn3 + '<br />' + outIn4 + '<br />'
-}
-
 document.querySelector('.b-10').onclick = t10;
-//НЕ ПОНИМАЮ ПОЧЕМУ ВНАЧАЛЕ ВЫПАДАЕТ undefined
