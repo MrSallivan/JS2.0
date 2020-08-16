@@ -264,7 +264,11 @@ let a14 = [
 ];
 
 function f14() {
-
+	let out = ' '
+	for (var i = 0; i < a14.length; i++) {
+		out += a14[i].length + ' '
+	}
+	document.querySelector('.out-14').innerHTML = out
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -282,7 +286,13 @@ let a15 = [
 ];
 
 function f15() {
-
+	let s = 0
+	for (var i = 0; i < a15.length; i++) {
+		if (a15[i].length > s) {
+			s = a15[i].length
+		}
+	}
+	document.querySelector('.out-15').innerHTML = s
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -311,13 +321,16 @@ console.groupEnd();
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 let a17 = [
-
+	[, ,6],
+	[,7],
+	[],
+	[, ,8]
 ];
 
 console.group('Task 17 ================');
-// console.log(a17[3][2] == 8);
-// console.log(a17[1][1] == 7);
-// console.log(a17[0][2] == 6);
+console.log(a17[3][2] == 8);
+console.log(a17[1][1] == 7);
+console.log(a17[0][2] == 6);
 
 console.groupEnd();
 
