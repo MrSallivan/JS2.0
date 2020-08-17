@@ -159,7 +159,14 @@ let a8 = {
 };
 
 function f8() {
-
+	let keySet = document.querySelector('.i-8').value
+	for (let key in a8) {
+		if (a8[keySet] !== undefined) {
+			document.querySelector('.out-8').innerHTML = keySet
+		} else {
+			document.querySelector('.out-8').innerHTML = 0
+		}
+	}
 }
 
 document.querySelector('.b-8').onclick = f8;
