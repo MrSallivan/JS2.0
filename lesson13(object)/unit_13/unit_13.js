@@ -207,8 +207,6 @@ function f10(arr, val) {
 		}
 	}
 	return out
-
-
 }
 
 document.querySelector('.b-10').onclick = () => {
@@ -233,6 +231,13 @@ let a11 = {
 };
 
 function f11() {
+	let keySet = document.querySelector('.i-11').value
+	for (let key in a11) {
+		if (key == keySet) {
+			delete a11[key]
+		}
+	}
+	f5(a11, '.out-11')
 }
 
 document.querySelector('.b-11').onclick = f11;
