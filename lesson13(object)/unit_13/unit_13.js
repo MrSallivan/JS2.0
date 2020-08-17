@@ -183,7 +183,14 @@ let a9 = {
 };
 
 function f9() {
-
+	let keySet = document.querySelector('.i-9').value
+	let out = ''
+	for (let key in a9) {
+		if (a9[key] == keySet) {
+			out += key + ' '
+		}
+	}
+	document.querySelector('.out-9').innerHTML = out
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -192,9 +199,16 @@ document.querySelector('.b-9').onclick = f9;
 // Давайте напишем полезную функцию f10, которая проверяет есть ли значение в ассоциативном массиве. Фукнция должна возвращать true если есть, и false если нет. Массив и значение передавать функции в качестве параметров.
 
 function f10(arr, val) {
+	let out = false
+	for (let key in arr) {
+		if (arr[key] == val) {
+			out = true
+			break
+		}
+	}
+	return out
 
-	//return true;
-	//return false;
+
 }
 
 document.querySelector('.b-10').onclick = () => {
