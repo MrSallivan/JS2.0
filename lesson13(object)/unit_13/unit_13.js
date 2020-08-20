@@ -254,7 +254,13 @@ let a12 = {
 };
 
 function f12() {
-
+	let valueSet = document.querySelector('.i-12').value
+	for (let key in a12) {
+		if (a12[key] == valueSet) {
+			delete a12[key]
+		}
+	}
+	f5(a12, '.out-12')
 }
 
 document.querySelector('.b-12').onclick = f12;
