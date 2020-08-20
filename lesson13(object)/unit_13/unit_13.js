@@ -423,7 +423,16 @@ let a19 = {
 }
 
 function f19() {
-
+    let out = ''
+    let inp = document.querySelector('.i-19').value
+    for(let key in a19) {
+        for (let i = 0; i < a19[key].length; i++) {
+            if ( a19[key][i].toUpperCase() == inp.toUpperCase()) {
+                out = key
+            }
+        }
+    }
+    document.querySelector('.out-19').innerHTML = out
 }
 
 document.querySelector('.b-19').onclick = f19;
