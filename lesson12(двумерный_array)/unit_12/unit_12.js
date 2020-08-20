@@ -228,10 +228,10 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 let count = 0
 function f13() {
-
-	for (let i = 0; i < 9; i++) {
+	a13 = [];
+	for (let i = 0; i < 8; i++) {
 		let arrTemp = []
-		for (let k = 0; k < 9; k++) {
+		for (let k = 0; k < 8; k++) {
 			arrTemp.push(count)
 			if (count == 0) {
 				count = 1
