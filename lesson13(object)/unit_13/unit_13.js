@@ -447,7 +447,15 @@ let a20 = {
 }
 
 function f20() {
-
+    let out = ''
+    for(let key in a20) {
+        for (let key2 in a20[key]) {
+            if (a20[key][key2][1] == 2) {
+                out += a20[key][key2][0] + ' '
+            }
+        }
+    }
+    document.querySelector('.out-20').innerHTML = out
 }
 
 document.querySelector('.b-20').onclick = f20
