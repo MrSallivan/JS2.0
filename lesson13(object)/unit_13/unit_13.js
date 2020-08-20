@@ -321,7 +321,11 @@ let a15 = {
 };
 
 function f15() {
-
+	let out = ''
+	for (let key in a15) {
+		out += a15[key].join(' ') + ' '
+	}
+	document.querySelector('.out-15').innerHTML = out
 }
 
 document.querySelector('.b-15').onclick = f15;
