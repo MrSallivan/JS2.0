@@ -349,7 +349,11 @@ let a16 = {
 }
 
 function f16() {
-
+	let out = ''
+	for (key in a16) {
+		out += a16[key].name + ' '
+	}
+	document.querySelector('.out-16').innerHTML = out
 }
 
 document.querySelector('.b-16').onclick = f16;
