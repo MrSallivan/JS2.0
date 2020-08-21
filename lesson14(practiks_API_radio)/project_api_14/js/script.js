@@ -1,4 +1,4 @@
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Khabarovsk,ru&appid=d0db13a6c2cef9cd83e17d46c677c948')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Хабаровск,ru&appid=d0db13a6c2cef9cd83e17d46c677c948')
 	.then(function (resp) { return resp.json() })
 	.then(function (data) {
 		console.log(data)
