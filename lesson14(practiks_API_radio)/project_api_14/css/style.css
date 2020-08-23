@@ -6,7 +6,9 @@
 	/*flex-basis: 0 0 200px;*/
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	font-family: "Rubik", sans-serif;
+	text-align: center;
 }
 h1 {
 }
@@ -14,19 +16,15 @@ hr {
 	width: 100%;
 }
 .section__wrap {
-	/*border: 1px solid red;*/
 	display: none;
 	flex-direction: row;
 	flex-wrap: wrap;
-
 }
 .weather {
 	margin: 10px;
 	padding: 5px;
 	border: solid 2px #4caf50;
 	border-radius: 5px;
-}
-.weather__row {
 }
 .weather__column {
 	display: flex;
@@ -37,24 +35,9 @@ hr {
 .weather__cityname {
 	cursor: pointer;
 }
-.weather__deg {
-}
-.weather__text {
-}
-.weather__features {
-}
-.weather__featuresitem {
-}
-.cloud {
-}
-.wings {
-}
-.weather__button {
-}
 .buttonsec {
 	display: flex;
 	justify-content: space-around;
-
 }
 .butplus {
 	display: none;
@@ -79,19 +62,16 @@ hr {
 	background: #000;
 	border: 2px solid #4caf50;
 	opacity: 0.9
-
 }
 .popup__wrap {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	height: 100%;
-
 }
 .selectwrap {
 	position: relative;
 	align-self: center;
-	
 }
 .popup__close {
 	color: red;
@@ -108,4 +88,16 @@ hr {
 }
 .i-18pop {
 	margin-top: 5px;
+}
+@media screen and (max-width: 480px){
+	.form-control {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.i-18, 
+	.form-control__btn {
+		margin-top: 10px;
+	}
 }
