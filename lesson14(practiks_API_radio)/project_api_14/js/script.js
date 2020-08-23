@@ -9,7 +9,6 @@ document.querySelector('.form-control__btn').onclick = function () {
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},ru&appid=d0db13a6c2cef9cd83e17d46c677c948`)
 		.then(function (resp) { return resp.json() })
 		.then(function (data) {
-		console.log(data)
 		document.querySelector('.weather__cityname').textContent = data.name
 		document.querySelector('.weather__deg').innerHTML = Math.round(data.main.temp - 273) + '&deg;'
 		document.querySelector('.weather__text').textContent = data.weather[0].description
@@ -26,7 +25,7 @@ function popup() {
 }
 function addCard() {
 	sel.style.display = 'none'
-	let gorod = document.getElementById('sel').value
+	let gorod = document.getElementById('selpop').value
 	let section = document.createElement('section')
 	section.classList.add('weather')
 	section.innerHTML = `
@@ -45,17 +44,13 @@ function addCard() {
 		</div>
 	`
 	document.querySelector('.section__wrap').append(section)
-	console.log(document.querySelector('.section__wrap').lastChild.children[0].children[0].children)
 
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${gorod},ru&appid=d0db13a6c2cef9cd83e17d46c677c948`)
 		.then(function (resp) { return resp.json() })
 		.then(function (data) {
-		console.log(data)
-		document.querySelector('.weather__cityname').textContent = data.name
 		document.querySelector('.section__wrap').lastChild.children[0].children[0].children[2].innerHTML = Math.round(data.main.temp - 273) + '&deg;'
 		document.querySelector('.section__wrap').lastChild.children[0].children[0].children[3].textContent = data.weather[0].description
 		document.querySelector('.section__wrap').lastChild.children[0].children[0].children[5].innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png"> <br> <div>Ветер: ${data.wind.speed} м/с</div> `
-		// document.querySelector('.section__wrap').lastChild.children[0].children[0].children[5][2].innerHTML = ` <div>Ветер: ${data.wind.speed} м/с</div>`
 	})
 }
 
@@ -63,11 +58,8 @@ document.querySelector('.butplus').onclick = popup
 document.querySelector('.popup__close').onclick = addCard
 
 document.querySelector('.butminus').onclick = () => {
-	console.log(document.querySelector('.section__wrap'))
 	document.querySelector('.section__wrap').lastChild.remove()
 	if(document.querySelector('.section__wrap').children.length == 0) {
-		document.querySelector('.form-control').style.display = 'block'
-		document.querySelector('.butplus').style.display = 'none'
-		document.querySelector('.butminus').style.display = 'none'
+		window.location.reload()
 	}
 }

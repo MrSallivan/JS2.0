@@ -10,6 +10,9 @@
 }
 h1 {
 }
+hr {
+	width: 100%;
+}
 .section__wrap {
 	/*border: 1px solid red;*/
 	display: none;
@@ -94,7 +97,15 @@ h1 {
 	color: red;
 	position: relative;
 	top: 40px;
-	left: -105px;
+	left: 0;
 	cursor: pointer;
 	align-self: center;
+}
+.form-control-popup {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+.i-18pop {
+	margin-top: 5px;
 }
