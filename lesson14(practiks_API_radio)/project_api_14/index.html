@@ -11,31 +11,50 @@
 <body>
 	<div class="container">
 		<h1>Узнай погоду в своём городе</h1>
-		<div class="form-control">Input i-18
+		<div class="form-control">Укажи свой город :
 			<input type="text" class="i-18">
+			<button class="form-control__btn">OK</button>
 		</div>
-		<section class="weather">
-			<div class="weather__row">
-				<div class="weather__column">
-					<p class="weather__cityname">Kiev</p>
-					<hr>
-					<p class="weather__deg">10&deg;</p>
-					<p class="weather__text">Clouds</p>
-					<hr>
-					<div class="weather__features">
-						<div class="weather__featuresitem cloud"></div>
-						<div class="weather__featuresitem wings"></div>
+		<div class="section__wrap">
+			<section class="weather">
+				<div class="weather__row">
+					<div class="weather__column">
+						<p class="weather__cityname">Kiev</p>
+						<hr>
+						<p class="weather__deg">10&deg;</p>
+						<p class="weather__text">Clouds</p>
+						<hr>
+						<div class="weather__features">
+							<div class="weather__featuresitem cloud"></div>
+							<div class="weather__featuresitem wings"></div>
+						</div>
 					</div>
-					<button class="weather__button">Go</button>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
+		<div class="buttonsec">
+			<button class="butplus">+</button>
+			<button class="butminus">-</button>
+		</div>
+		
 	</div>
 
-
-
-
-
+	<div class="popup">
+		<div class="popup__wrap">
+			<div class="selectwrap">
+				<select name="" id="sel" class="popup__select">
+					<option disabled >Выбери город</option>
+					<option value="Новосибирск">Новосибирск</option>
+					<option value="Москва" selected>Москва</option>
+					<option value="Хабаровск">Хабаровск</option>
+					<option value="Омск">Омск</option>
+					<option value="Санкт-Петербург">Санкт-Петербург</option>
+					<option value="Владивосток">Владивосток</option>
+				</select>
+				<button class="popup__close">Выбрать</button>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/script.js"></script>
 </body>
