@@ -85,8 +85,16 @@ document.querySelector('.b-5').addEventListener('click', f5);
 let a6 = [ [1,2], [3,4], [5,6]];
 
 function f6() {
-
+    rez = ''
+    for (let key of a6) {
+        rez += key.join('')
+        }
+    a6 = rez.split('')
+    console.log(a6)
+    
+    document.querySelector('.out-6').innerHTML = a6.join(' ')
 }
+document.querySelector('.b-6').addEventListener('click', f6)
 
 // Task 7
 //При нажатии .b-7 выполняете функцию f7. Функция должна переиндексировать массив a7. Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. Вам необходимо сделать из a7 объект, где ключи - значения id из вложенных массивов, а значения - имя (т.е { 23 : Ivan, 45 : Petr}
