@@ -49,19 +49,24 @@ document.querySelector('.b-3').onclick = () => {
 let s4 = new Set(['a', 'b', 'c', 'z']);
 
 function f4() {
-
+	let val = document.querySelector('.i-4').value
+	let ss = s4.has(val)
+	if (ss) {
+		document.querySelector('.out-4').innerHTML = true
+	} else {
+		document.querySelector('.out-4').innerHTML = false
+	}
 }
-
 document.querySelector('.b-4').onclick = f4;
 
 // Task 5
-// // При нажатии b-5 выполняете функцию f5. Функция должна  вывести в out-5 длину набора s5.
+// При нажатии b-5 выполняете функцию f5. Функция должна  вывести в out-5 длину набора s5.
 
 
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
 function f5() {
-
+	document.querySelector('.out-5').innerHTML = s5.size
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -72,7 +77,9 @@ document.querySelector('.b-5').onclick = f5;
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 
 function f6() {
-
+	let s1 = new Set(a6)
+	let rez = s1.size
+	document.querySelector('.out-6').innerHTML = rez
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -81,7 +88,13 @@ document.querySelector('.b-6').onclick = f6;
 // Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. Для проверки уникальности символов используйте Set.
 
 function f7() {
-
+	let val = document.querySelector('.i-7').value.split('')
+	let set7 = new Set(val)
+	if ((val.length == set7.size) && (val.length > 6)) {
+		document.querySelector('.out-7').innerHTML = 1
+	} else {
+		document.querySelector('.out-7').innerHTML = 0
+	}
 }
 
 document.querySelector('.b-7').onclick = f7;
