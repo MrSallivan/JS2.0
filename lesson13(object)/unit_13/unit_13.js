@@ -27,7 +27,7 @@ function f2() {
 		"five": "hi"
 	};
 	document.querySelector('.out-2').innerHTML = a2.five
-	return a1.five
+	return a2.five
 }
 
 document.querySelector('.b-2').onclick = () => {
@@ -162,7 +162,7 @@ function f8() {
 	let keySet = document.querySelector('.i-8').value
 	for (let key in a8) {
 		if (a8[keySet] !== undefined) {
-			document.querySelector('.out-8').innerHTML = keySet
+			document.querySelector('.out-8').innerHTML = a8[keySet]
 		} else {
 			document.querySelector('.out-8').innerHTML = 0
 		}
