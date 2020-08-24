@@ -154,6 +154,8 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [[1], [1]];
 
 function f11() {
+	let nub = new Set(a11)
+	console.log(nub)
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -164,7 +166,9 @@ document.querySelector('.b-11').onclick = f11;
 let str12 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
 function f12() {
-
+	let strToMas = str12.split('')
+	let newset = new Set(strToMas)
+	return newset
 }
 
 document.querySelector('.b-12').onclick = () => {
@@ -172,14 +176,26 @@ document.querySelector('.b-12').onclick = () => {
 }
 
 // Task 13
-//  При нажатии b-13 выполняете функцию f13. Функция должна преобразовать строку str13 в массив, причем каждая буква - отдельный элемент массива. Потом создать набор на основе массива. Затем, перебирая набор поэлементам, найти сколько раз каждый символ встречается в исходном массиве. Результат - в виде массива типа { символ : количество, символ : количество } вернуть в функции.
+// При нажатии b - 13 выполняете функцию f13.Функция должна преобразовать строку str13 в массив, причем каждая буква - отдельный элемент массива.Потом создать набор на основе массива.Затем, перебирая набор поэлементам, найти сколько раз каждый символ встречается в исходном массиве.Результат - в виде массива типа { символ: количество, символ : количество } вернуть в функции.
 
 let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
 
 function f13() {
-
-	// return
+	let strToMas = str12.split('')
+	let newset = new Set(strToMas)
+	let rez = {}
+	for (let key of newset) {
+		let a = 0
+		strToMas.forEach((elem) => {
+			if (elem == key) {
+				a += 1
+			}
+		})
+		rez[key] = a
+	}
+	console.log(rez.h)
+	return rez
 }
 
 document.querySelector('.b-13').onclick = () => {
