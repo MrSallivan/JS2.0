@@ -3,7 +3,11 @@
 
 const a1 = [5,7,9, 11, 13, 15];
 function f1() {
-
+    let rez = ''
+    for (let i = 0; i < a1.length; i++) {
+        rez += a1[i] + ' '
+    }
+    document.querySelector('.out-1').innerHTML = rez
 }
 
 document.querySelector('.b-1').addEventListener('click', f1);
@@ -14,7 +18,11 @@ document.querySelector('.b-1').addEventListener('click', f1);
 const a2 = [5,7,9, 11, 13, 15];
 
 function f2() {
-
+     let rez = ''
+    for (let i = 0; i < a2.length; i++) {
+        rez += i + ' ' + a2[i] + ' '
+    }
+    document.querySelector('.out-2').innerHTML = rez
 }
 
 document.querySelector('.b-2').addEventListener('click', f2);
@@ -25,7 +33,11 @@ document.querySelector('.b-2').addEventListener('click', f2);
 
 
 function f3() {
-
+    let divs = document.getElementsByClassName('out-3')
+    for(let val of divs) {
+        val.innerHTML = 3
+    }
+    
 }
 
 document.querySelector('.b-3').addEventListener('click', f3);
