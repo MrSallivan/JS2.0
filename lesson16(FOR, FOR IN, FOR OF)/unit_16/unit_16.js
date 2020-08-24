@@ -48,7 +48,12 @@ document.querySelector('.b-3').addEventListener('click', f3);
 
 
 function f4() {
-
+    let divs = document.querySelectorAll('.out-4')
+    let rez = ''
+   for (var i = 0; i < divs.length; i++) {
+        rez = divs[i].textContent + 4
+        divs[i].textContent = rez
+   }
 }
 
 document.querySelector('.b-4').addEventListener('click', f4);
@@ -58,14 +63,16 @@ document.querySelector('.b-4').addEventListener('click', f4);
 // Поскольку для коллекций push запрещен - то данная операция должна вызывать ошибку. Убедитесь в этом. Чтобы экранировать ошибку и не дать ей влиять на работу документа в целом, применим try, catch.
 
 function f5() {
-    // let a5 =
+    let a5 = document.querySelectorAll('.out-5')
+    console.log(a5);
+    let elem =  document.createElement('div')
+    
     try {
-        // тут делаете push
-
+       a5.push(elem)
     }
     catch(error) {
         // если будет ошибка - то просто сообщим об этом в консоль, но код продолжит работать
-        console.log(error);
+        console.log(error, 'моя ошибка');
     }
     console.log('already work');
 }
