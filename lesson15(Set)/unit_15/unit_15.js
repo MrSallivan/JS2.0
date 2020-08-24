@@ -105,7 +105,14 @@ document.querySelector('.b-7').onclick = f7;
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
 
 function f8() {
-
+	console.log(s8)
+	let res8 = []
+	for (let key of s8) {
+		if (key > 5) {
+			res8.push(key)
+		}
+	}
+	return res8
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -116,8 +123,9 @@ document.querySelector('.b-8').onclick = () => {
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать набор set в качестве параметра, преобразовывать его в массив и возвращать в виде строки. При преобразовании массива в строку между элементами должен быть пробел.
 
 function f9(our_set) {
-
-	// return ///
+	let mas = Array.from(our_set)
+	let rez = mas.join(' ')
+	return rez
 }
 
 document.querySelector('.b-9').onclick = () => {
@@ -129,7 +137,9 @@ document.querySelector('.b-9').onclick = () => {
 // При нажатии b-10 выполняете функцию f10. Функция должна принимать набор set в качестве параметра и выводить его в указанный элемент. Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
 
 function f10(out_set, elem) {
-
+	let mas = Array.from(out_set)
+	let rez = mas.join(' ')
+	document.querySelector(elem).innerHTML = rez
 }
 
 document.querySelector('.b-10').onclick = () => {
