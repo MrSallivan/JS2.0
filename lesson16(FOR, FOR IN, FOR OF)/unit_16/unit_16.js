@@ -119,8 +119,12 @@ document.querySelector('.b-7').addEventListener('click', f7);
 let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
-
-	console.loog(a8);
+	let empt = []
+	for (let i = 0; i < a7.length; i++) {
+		empt[i] = a8[i].id
+	}
+	a8 = empt
+	console.log(a8);
 }
 
 document.querySelector('.b-8').addEventListener('click', f8);
