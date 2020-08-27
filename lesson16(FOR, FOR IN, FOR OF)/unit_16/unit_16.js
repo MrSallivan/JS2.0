@@ -120,7 +120,7 @@ let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
 	let empt = []
-	for (let i = 0; i < a7.length; i++) {
+	for (let i = 0; i < a8.length; i++) {
 		empt[i] = a8[i].id
 	}
 	a8 = empt
