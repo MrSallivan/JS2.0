@@ -51,20 +51,20 @@ let a4 = [4,"3",6,7,"12",34,"56",78,90,11]
 function t4() {
 	let out = a4.map(elem => {
         if( typeof(elem) == 'number') {
-			return elem
-		}
-    });
-	let arr = []
-	let a = 0
-    for(let value of out) {
-    	if (value !== undefined) {
-    		arr[a] = value
-    		a++
-    	} else if ( value == undefined ){
-    		continue;
-    	}
-    }
-    a4_res = arr
+			a4_res.push(elem)
+		} 
+    })
+	// let arr = []
+	// let a = 0
+ //    for(let value of out) {
+ //    	if (value !== undefined) {
+ //    		arr[a] = value
+ //    		a++
+ //    	} else if ( value == undefined ){
+ //    		continue;
+ //    	}
+ //    }
+ //    a4_res = arr
 	console.log(a4_res)
 }
 
