@@ -135,7 +135,13 @@ document.querySelector('.b-8').addEventListener('click', f8);
 let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
-
+	var a = 0
+	for (let index in a9) {
+		if ((a9[index].length - 1) > a) {
+			a = a9[index].length - 1
+		}
+	}
+	document.querySelector('.out-9').innerHTML = a
 }
 
 document.querySelector('.b-9').addEventListener('click', f9);
