@@ -152,7 +152,12 @@ document.querySelector('.b-9').addEventListener('click', f9);
 let a10 = [4, 6, 9, 'Hello'];
 
 function f10() {
-
+	let masAs = {}
+	for (let index of a10) {
+		masAs[index] = index
+	}
+	a10 = masAs
+	return a10
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
