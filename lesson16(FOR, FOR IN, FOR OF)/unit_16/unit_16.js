@@ -208,7 +208,13 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
+	a13 = a13.split('')
+	let out = ''
+	for (let value of a13) {
+		out += value + ' '
+	}
 
+	document.querySelector('.out-13').innerHTML = out
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
