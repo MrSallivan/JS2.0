@@ -73,9 +73,14 @@ document.querySelector('.b-4').onclick = t4;
 
 // Task 5 ============================================
 /*  Дан массив b1 = [3, 14, 15, 92]. C помощью filter переберите массив и создайте новый b1_res, который содержит только четные числа из b1. Действия должны запускаться при вызове функции t5. */
-
+let b1 = [3, 14, 15, 92]
 function t5() {
-
+	b1_res = b1.filter( item => {
+		if ( item % 2 == 0 ) {
+			return true
+		}
+	})
+	console.log(b1_res)
 }
 
 document.querySelectorAll('.b-5').forEach(elem => {
@@ -86,9 +91,16 @@ document.querySelectorAll('.b-5').forEach(elem => {
 
 // Task 6 ============================================
 /*  Дан массив b6 = [3, 14, 15, 92, "6", "5", "hello", 32]. C помощью filter переберите массив b6 и создайте новый b6_res, который содержит только числа из b6. Действия должны запускаться при вызове функции t6. */
-
+let b6 = [3, 14, 15, 92, "6", "5", "hello", 32]
 function t6() {
-
+	b6_res = b6.filter( item => {
+		if( typeof(item) == 'number') {
+			return true
+		} else {
+			return false
+		}
+	})
+	console.log(b6_res)
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -96,9 +108,16 @@ document.querySelector('.b-6').onclick = t6;
 
 // Task 7 ============================================
 /*  Дан массив b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32]. C помощью filter переберите массив b7 и создайте новый b7_res, который содержит только строки из b7, длина которых больше 3. Действия должны запускаться при вызове функции t7. */
-
+let b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32]
 function t7() {
-
+	b7_res = b7.filter( item => {
+		if( (typeof(item) == 'string') && (item.length > 3) ) {
+			return true
+		} else {
+			return false
+		}
+	})
+	console.log(b7_res)
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -106,8 +125,14 @@ document.querySelector('.b-7').onclick = t7;
 // Task 8 ============================================
 /* Дан массив b8 = [3, 14, 15, 92, "6", "5", "hello", 32]. С помощью filter, переберите массив b8 и создайте новый массив b8_res, который содержит индексы четных элементов. Действия должны запускаться при вызове функции t8 */
 
+b8 = [3, 14, 15, 92, "6", "5", "hello", 32]
 function t8() {
-
+	let out = b8.filter( (item, index) => {
+		if ( (item % 2 == 0) && (typeof(item) !== 'string') ) {
+			b8_res.push(index)
+		}
+	})
+	console.log(b8_res)
 }
 
 document.querySelector('.b-8').onclick = t8;
