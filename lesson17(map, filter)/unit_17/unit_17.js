@@ -140,9 +140,18 @@ document.querySelector('.b-8').onclick = t8;
 
 // Task 9 ============================================
 /*  Дан массив b9 = [3, "hello", 4, "world", 5, "hi"]. С помощью filter, переберите массив b5 и создайте новый массив b9_num и b9_string, которые содержат первый - числа из b9, второй - строки. Задачу решить одним filter. Действия должны запускаться при вызове функции t9. */
-
+let b9 = [3, "hello", 4, "world", 5, "hi"]
 function t9() {
-
+	b9_num = b9.filter( item => {
+		if ( typeof(item) == 'number' ) {
+			return true
+		} else if ( typeof(item) == 'string') {
+			b9_string.push(item)
+		}
+	})
+	
+	console.log(b9_num)
+	console.log(b9_string)
 }
 
 document.querySelector('.b-9').onclick = t9;
