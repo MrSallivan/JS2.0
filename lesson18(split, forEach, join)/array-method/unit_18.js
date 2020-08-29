@@ -4,11 +4,11 @@ let a1_res = [], a2_res = [], a3_res = [], a4_res = [], a5_res = [], a6_res = []
 /* <p>Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите массив и создайте новый массив a1_res куда добавьте элементы данного массива умноженные на 2. Действия должны запускаться при вызове функции t1.</p> */
 
 function t1() {
-    let a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11];
-    let out = a1.forEach(elem => {
-        a1_res.push(elem * 2);
-    });
-    document.querySelector('.out-1').innerHTML = a1_res;
+	let a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11];
+	let out = a1.forEach(elem => {
+		a1_res.push(elem * 2);
+	});
+	document.querySelector('.out-1').innerHTML = a1_res;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -19,9 +19,9 @@ document.querySelector('.b-1').onclick = t1;
 запускаться при вызове функции t2.*/
 
 function t2() {
-	a1 = [2,3,4,5,10,11,12]
-	let out = a1.forEach( elem => {
-		a2_res.push(elem/2)
+	a1 = [2, 3, 4, 5, 10, 11, 12]
+	let out = a1.forEach(elem => {
+		a2_res.push(elem / 2)
 	})
 	console.log(a2_res)
 }
@@ -35,7 +35,7 @@ document.querySelector('.b-2').onclick = t2;
 function t3() {
 	a3 = [2, 'hello', 3, 'hi', 4, 'Mazai']
 	a3.forEach(elem => {
-		if ( typeof(elem) == 'number' ) {
+		if (typeof (elem) == 'number') {
 			a3_res.push(elem)
 		}
 	})
@@ -49,7 +49,14 @@ document.querySelector('.b-3').onclick = t3;
 /*  На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и добавьте атрибуты в массив a4_res  Запускаться решение должно при вызове функции t4.*/
 
 function t4() {
-
+	let span = document.querySelectorAll('.task-4')
+	let atr
+	span.forEach(elem => {
+		atr = elem.getAttribute('data')
+		a4_res.push(atr)
+	}
+	)
+	console.log(a4_res)
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -59,11 +66,12 @@ document.querySelector('.b-4').onclick = t4;
 /*  На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data элемента, по которому кликнули в массив a5_res.*/
 
 function t5() {
-
+	a5_res.push(this.getAttribute('data'))
+	console.log(a5_res)
 }
 
 document.querySelectorAll('.task-5').forEach(elem => {
-    elem.onclick = t5;
+	elem.onclick = t5;
 });
 
 
