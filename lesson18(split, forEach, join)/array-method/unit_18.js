@@ -117,11 +117,9 @@ document.querySelector('.b-8').onclick = t8;
 /*  Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель - дефис. Результат присвойте a9_res. Запускаться решение должно при вызове функции t9. Допускается лишний дефис в конце строки!!! */
 
 function t9() {
-	a9 = [[hi, mahai], [test, best]]
+	a9 = [['hi', 'mahai'], ['test', 'best']]
 	a9.forEach(elem => {
-		elem.forEach(valeu => {
-			a9_res += value + '-'
-		})
+		a9_res += elem.join('-') + '-'
 	})
 	console.log(a9_res)
 }
