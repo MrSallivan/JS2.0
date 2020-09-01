@@ -225,7 +225,5 @@ function t20() {
 	let val = +document.querySelector('progress').getAttribute('value')
 	val++
 	document.querySelector('progress').setAttribute('value', val)
-	console.log(val)
-
 }
 document.querySelector('progress').onmousemove = t20
