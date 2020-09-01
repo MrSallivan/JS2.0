@@ -177,38 +177,45 @@ document.querySelector('.div-15').onmousemove = t15;
 
 
 let w = 75
-document.querySelector('.div-16').onmousemove = () => {
+function kapec() {
 	document.querySelector('.div-16').style.width = w + 'px'
 	w++
 }
+document.querySelector('.div-16').addEventListener( 'mousemove', kapec)
 
 // Task 17 ============================================
 /*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые включают и отключают событие move в задании 16. */
 
 function t17On() {
-
+	document.querySelector('.div-16').addEventListener( 'mousemove', kapec)
 }
 function t17Off() {
-
+	document.querySelector('.div-16').removeEventListener('mousemove', kapec)
 }
-// ваше событие здесь!!!
-// ваше событие здесь!!!
+document.querySelector('.b-17_on').onclick = t17On
+document.querySelector('.b-17_off').onclick = t17Off
 
 // Task 18 ============================================
 /*  Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
 
 function t18() {
+	let wdth = document.querySelector('div.div-18.block').offsetWidth
+	document.querySelector('.div-18').textContent = wdth
 
 }
-// ваше событие здесь!!!
+
+document.querySelector('.div-18').onmouseenter = t18
 
 // Task 19 ============================================
 /*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
 
 function t19() {
-
+	let cls = document.querySelector('.div-19').classList
+	console.log(cls)
+	document.querySelector('.div-19').style.fontSize = '11px'
+	document.querySelector('.div-19').textContent = cls
 }
-// ваше событие здесь!!!
+document.querySelector('.div-19').onmouseout = t19
 
 
 // Task 20 ============================================
