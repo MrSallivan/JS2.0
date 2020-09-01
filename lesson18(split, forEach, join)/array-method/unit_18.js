@@ -137,7 +137,7 @@ function t10() {
 		sex: 1,
 		id: 45
 	}
-	a10_res = 'https://site.ru?'
+	a10_res = '?'
 	for (let key in a10) {
 
 		a10_res += `${key}=${a10[key]}&`
