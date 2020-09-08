@@ -13,18 +13,12 @@ document.querySelector('.i-1').onkeyup = t1
 // Task 2 ============================================
 /*  Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. */
 
-function t2() {
-		let out = ''
-	document.addEventListener('keyup', (e) => {
-		let val = e.keyCode
-		out += val + ' '
-		document.querySelector('.out-2').textContent = out
-		return val
-  	})
-  
+function t2(e) {
+	document.querySelector('.out-2').textContent += e.keyCode + " "
+	return event.keyCode
 }
 
-document.querySelector('.i-2').onmousedown = t2()
+document.querySelector('.i-2').onkeydown = t2
 
 
 // Task 3 ============================================
@@ -32,30 +26,40 @@ document.querySelector('.i-2').onmousedown = t2()
 
 let w3 = 75;
 
-function t3() {
-
+function t3(e) {
+	let val = e.code
+	if ( val.indexOf('Key') !== -1) {
+		document.querySelector('.out-3').innerHTML = true
+	} else {
+		document.querySelector('.out-3').innerHTML = false
+	}
+	return console.log('work')
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-3').onkeypress = t3
 
 
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out получаем ab4bci. */
 
 function t4() {
-
+	let val = document.querySelector('.i-4').value
+	val = val.toLowerCase()
+	document.querySelector('.out-4').textContent = val
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-4').onkeyup = t4
 
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
 
 function t5() {
-
+	let val = document.querySelector('.i-5').value
+	val = val.toUpperCase()
+	document.querySelector('.out-5').textContent = val
+	
 }
-
-// ваше событие здесь!!!
+document.querySelector('.i-5').onkeyup = t5
 
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
