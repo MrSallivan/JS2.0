@@ -33,7 +33,6 @@ function t3(e) {
 	} else {
 		document.querySelector('.out-3').innerHTML = false
 	}
-	return console.log('work')
 }
 
 document.querySelector('.i-3').onkeypress = t3
@@ -64,22 +63,30 @@ document.querySelector('.i-5').onkeyup = t5
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
 
-function t6() {
-
+let out6 = ''
+function t6(e) {
+	if( e.keyCode >= 97 ) {
+		out6 += e.key
+	}
+	document.querySelector('.i-6').value = out6
+	return false
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-6').onkeypress = t6
 
 
 // Task 7 ============================================
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
 
 function t7() {
-    const a7 = [];
-
+    const a7 = ['q','w','e','r','t','y','u','i','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m',1,2,34,4,5,6,7,8,9,0];
+    out = ''
+    let ran = Math.floor(0 + Math.random() * ((a7.length - 1) + 1 - 0))
+    out = a7[ran]
+    document.querySelector('.out-7').textContent += out
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-7').oninput = t7
 
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
