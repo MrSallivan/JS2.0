@@ -109,12 +109,16 @@ document.querySelector('.i-8').onkeyup = t8
 
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
-
-function t9() {
-
+var a = 0
+function t9(e) {
+	let val = e.key
+	if ( val == "ArrowDown" ) {
+		a = a + 1
+		document.querySelector('.out-9').textContent = a
+	}
+	
 }
-
-// ваше событие здесь!!!
+document.querySelector('.i-9').onkeyup = t9
 
 
 // Task 10 ============================================
