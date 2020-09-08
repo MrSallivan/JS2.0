@@ -91,11 +91,20 @@ document.querySelector('.i-7').oninput = t7
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {
-
+function t8(e) {
+	let out = ''
+	let val = e.key
+	if ( e.key == 'i' ) {
+		val = '1'
+	} else if( e.key == 'o' ) {
+		val = '0'
+	} else if( e.key == 'l' ){
+		val = '7'
+	} 
+	document.querySelector('.out-8').textContent += val
+	
 }
-
-// ваше событие здесь!!!
+document.querySelector('.i-8').onkeyup = t8
 
 
 // Task 9 ============================================
