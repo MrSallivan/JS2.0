@@ -14,16 +14,17 @@ document.querySelector('.i-1').onkeyup = t1
 /*  Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. */
 
 function t2() {
-	
+		let out = ''
 	document.addEventListener('keyup', (e) => {
-		
-  		document.querySelector('.out-2').innerHTML = e.keyCode
-  		return e.keyCode
+		let val = e.keyCode
+		out += val + ' '
+		document.querySelector('.out-2').textContent = out
+		return val
   	})
-	
+  
 }
 
-document.querySelector('.i-2').onmousedown = t2
+document.querySelector('.i-2').onmousedown = t2()
 
 
 // Task 3 ============================================
