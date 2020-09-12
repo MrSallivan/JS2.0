@@ -37,3 +37,6 @@ section {
 .keyboard--hidden {
     display: none;
 }
+.keyboard__key {
+    color: white;
+}
