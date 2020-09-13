@@ -26,6 +26,9 @@ section {
 	margin: 25px;
 }
 .keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 	width: 100%;
 	padding: 5px 0;
 	background: #004134;
@@ -38,6 +41,9 @@ section {
 }
 .keyboard__key {
 	color: white;
+}
+.keyboard__key[data="32"] {
+    width: 300px;
 }
 .clearfix {
 	display: block;

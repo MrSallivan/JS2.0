@@ -147,28 +147,29 @@ document.querySelector('.keyboardUpper__btn').onclick = () => {
 	document.querySelector('.keyboard').classList.toggle('keyboard--hidden')
 }
 
-const keyboard = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 92, 8, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47]
-// 96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 92, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47
-// document.onkeypress = function (event) {
-// 	keyboard.push(event)
-// 	console.log(keyboard)
-// }
+const keyboard = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 92, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 13, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47, 32]
 
 function init() {
 	let out = ''
 	for (let i = 0; i < keyboard.length; i++) {
-		if (i == 14) {
-			out += '<button class=keyboard__key data="' + keyboard[i] + '">' + '<--' + '</button>'
+		if ( keyboard[i] == 92) {
+			out += '<button class=keyboard__key data="' + keyboard[i] + '">' + String.fromCharCode(keyboard[i]) + '</button>'+'<div class=clearfix></div>'
+		}else if (keyboard[i] == 93) {
+			out += '<button class=keyboard__key data="' + keyboard[i] + '">' + String.fromCharCode(keyboard[i]) + '</button>'+'<div class=clearfix></div>'
+		}else if (keyboard[i] == 13) {
+			out += '<button class=keyboard__key data="' + keyboard[i] + '">' + 'ENTER' + '</button>'+'<div class=clearfix></div>'
+		}else if (keyboard[i] == 47) {
+			out += '<button class=keyboard__key data="' + keyboard[i] + '">' + String.fromCharCode(keyboard[i]) + '</button>'+'<div class=clearfix></div>'
 		}
-		if (i == 15 || i == 26 || i == 37) {
-			out += '<div class=clearfix></div>'
-		}
+		else {
 		out += '<button class=keyboard__key data="' + keyboard[i] + '">' + String.fromCharCode(keyboard[i]) + '</button>'
+		}
 	}
 	document.querySelector('.keyboard').innerHTML = out
 }
 
 init()
+
 
 document.querySelector('.i-11').onkeypress = function (event) {
 
@@ -189,7 +190,6 @@ document.querySelectorAll('.keyboard .keyboard__key').forEach(function (element)
 	element.onmouseup = function (e) {
 		let code = this.getAttribute('data')
 		this.classList.remove('active')
-		console.log(code)
 		out11 += String.fromCharCode(code)
 		document.querySelector('.i-11').value = out11
 	}
