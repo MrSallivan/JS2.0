@@ -98,11 +98,11 @@ document.querySelector('.div-8').ontouchend = t8
 // Task 9 ============================================
 /* Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных касаний в out-9. */
 
-function t9() {
-
+function t9(event) {
+	document.querySelector('.out-9').innerHTML = event.touches.length
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-9').ontouchstart = t9
 
 
 // Task 10 ============================================
