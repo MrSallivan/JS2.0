@@ -74,19 +74,25 @@ document.querySelector('.div-4').ontouchend = t6
 /*  Дан блок div-7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет. */
 
 function t7() {
-
+	document.querySelector('.div-7').style.background = 'red'
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-7').ontouchend = t7
 
 // Task 8 ============================================
 /*  Дан блок div-8. Добавьте на него событие touch, которое при срабатывании окрашивает блок случаным цветом из массива a8=[red, green, blue, orange, pink, yellow] */
 
 function t8() {
+	a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow']
+	function aRan(min, max) {
+		let rand = min - 0.5 + Math.random() * (max - min + 1);
+		return Math.round(rand);
+	}
+	document.querySelector('.div-8').style.background = a8[aRan(0, a8.length - 1)]
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-8').ontouchend = t8
 
 
 // Task 9 ============================================
