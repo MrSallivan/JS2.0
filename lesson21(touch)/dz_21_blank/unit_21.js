@@ -64,10 +64,10 @@ document.querySelector('.b-5').onclick = t5
 /*  Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend. */
 
 function t6() {
-
+	document.querySelector('.out-6').textContent += 'touchend'
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-4').ontouchend = t6
 
 
 // Task 7 ============================================
