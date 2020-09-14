@@ -107,21 +107,27 @@ document.querySelector('.div-9').ontouchstart = t9
 
 // Task 10 ============================================
 /*  Дан блок div-10. Добавьте на него событие touchmove. При срабатывании события - увеличивайте его ширину на 1. */
+let b = 75
 
-function t10() {
-
+function t10(event) {
+	b++
+	document.querySelector('.div-10.block').style.width = `${b}px`
 }
-
-// ваше событие здесь!!!
+document.querySelector('.div-10').ontouchmove = t10
 
 // Task 11 ============================================
 /*  Дан блок div-11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX, radiusY. */
 
-function t11() {
-
+function t11(event) {
+	let tach = event.changedTouches
+	let out = ''
+	for (let i = 0; i < tach.length; i++) {
+		out = `radiusX: ${tach[i].radiusX}, radiusY: ${tach[i].radiusY}`
+	}
+	document.querySelector('.out-11').innerHTML = out
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-11').addEventListener("touchstart", t11);
 
 // Task 12 ============================================
 /*  Мини проект. Ознакомьтесь с версткой в задании 12.
