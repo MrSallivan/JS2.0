@@ -143,17 +143,31 @@ const images = document.querySelectorAll('.img-12-min');
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
 const next = document.querySelectorAll('.next');
-next.onclick = nextFunction;
+next[0].onclick = nextFunction
+next[0].ontouchend = nextFunction
+
 
 const prev = document.querySelectorAll('.prev');
-prev.onclick = prevFunction;
+prev[0].onclick = prevFunction
+prev[0].ontouchend = prevFunction
+
 
 function nextFunction() {
-
+	images[count].classList.remove('active-img')
+	count++
+	if ( count > images.length - 1 ) {
+		count = 0
+	}
+	images[count].classList.add('active-img')
 }
 
 function prevFunction() {
-
+	images[count].classList.remove('active-img')
+	count--
+	if ( count < 0 ) {
+		count = images.length - 1
+	}
+	images[count].classList.add('active-img')
 }
 
 
