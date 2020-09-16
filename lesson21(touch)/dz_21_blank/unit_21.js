@@ -151,6 +151,9 @@ const prev = document.querySelectorAll('.prev');
 prev[0].onclick = prevFunction
 prev[0].ontouchend = prevFunction
 
+const reset = document.querySelector('button.button-primary.reset')
+reset.onclick = resetFunction
+reset.ontouchend = resetFunction
 
 function nextFunction() {
 	images[count].classList.remove('active-img')
@@ -159,6 +162,7 @@ function nextFunction() {
 		count = 0
 	}
 	images[count].classList.add('active-img')
+	setBigImg(images[count])
 }
 
 function prevFunction() {
@@ -168,7 +172,21 @@ function prevFunction() {
 		count = images.length - 1
 	}
 	images[count].classList.add('active-img')
+	setBigImg(images[count])
 }
 
+function resetFunction() {
+	for ( let val of images) {
+		val.classList.remove('active-img')
+	}
+	count = 0 
+	images[count].classList.add('active-img')
+	setBigImg(images[count])
+}
+
+function setBigImg(img) {
+	let getSrc = img.src
+	document.querySelector('.img-12-max').setAttribute('src', getSrc)
+}
 
 // ваше событие здесь!!!
