@@ -3,28 +3,38 @@
 /* Создайте функцию t1 которая записывает  в LS  ключ 5 со значением 11. Проверьте что происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-1. */
 
 function t1() {
+	localStorage.setItem('5', 11)
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-1').onclick = t1
 
 // Task 2 ============================================
 /* Создайте функцию t2 которая записывает  в LS  массив a2 = [7,6,5]. Ключ a2. Проверьте что происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-2. */
 
 function t2() {
-
+	a2 = [7, 6, 5]
+	localStorage.setItem('a2', JSON.stringify(a2))
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-2').onclick = t2
 
 
 // Task 3 ============================================
 /*  При нажатии кнопки t3 выведите из LS сохранненный массив a2. Выведите в out-3 в формате ключ пробел значение перенос строки.  */
 
 function t3() {
-
+	let b = JSON.parse(localStorage.getItem('a2'))
+	let out = ''
+	for (let i = 0; i < b.length; i++) {
+		out += i + ' ' + b[i] + '<br>'
+	}
+	document.querySelector('.out-3').innerHTML = out
+	console.log(b)
+	console.log(typeof (b))
 }
 
-// ваше событие здесь!!!
+
+document.querySelector('.b-3').onclick = t3
 
 
 // Task 4 ============================================
