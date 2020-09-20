@@ -78,7 +78,7 @@ a7 = []
 function t7() {
 	let input = document.querySelector('.i-7').value
 	a7.push(input)
-	localStorage.setItem
+	localStorage.setItem('a7', JSON.stringify(a7))
 
 }
 
