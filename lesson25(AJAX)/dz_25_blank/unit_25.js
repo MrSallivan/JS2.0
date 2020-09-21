@@ -155,21 +155,45 @@ document.querySelector('.b-7').onclick = t7
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
 
 function t8() {
+let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=8&name=Alex&num1=5&num2=10&year=1984', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-8').innerHTML = data
+	}
 
 }
 
-// ваше событие здесь!!!
-
+document.querySelector('.b-8').onclick = t8
 
 // Task 9 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-9 результат. Запускаться функция должна по нажатию b-9. */
 
 function t9() {
+let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=9&name=Alex&m=1&d=1&y=1', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-9').innerHTML = data
+	}
 
 }
 
-// ваше событие здесь!!!
-
+document.querySelector('.b-9').onclick = t9
 
 // Task 10 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Если все сделано верно, сервер пришлет строку hello. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-10 результат. Запускаться функция должна по нажатию b-10.
