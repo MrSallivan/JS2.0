@@ -23,20 +23,19 @@ document.querySelector('.b-1').onclick = t1
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
 
 function t2() {
-	const request = new XMLHttpRequest()
+	let request = new XMLHttpRequest()
+
 	request.onreadystatechange = function () {
 		if ( this.readyState == 4 && this.status == 200 ) {
 			myFunction(this.responseText)
 		}
 	}
-		request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=2&name=Alex', true)
-		request.send()
-
-
-		function myFunction(data) {
-		document.querySelector('.out-2').textContent = data
-		}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=2&name=Alex', true)
+	request.send()
 	
+	function myFunction(data) {
+		document.querySelector('.out-2').textContent = data
+	}
 }	
 document.querySelector('.b-2').onclick = t2
 
@@ -45,39 +44,90 @@ document.querySelector('.b-2').onclick = t2
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
 
 function t3() {
+	let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=3&name=Alex&num1=5&num2=10', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-3').textContent = data
+	}
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-3').onclick = t3
 
 
 // Task 4 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате).  Выведите в out-4 результат. Запускаться функция должна по нажатию b-4. */
 
 function t4() {
+	let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=4&name=Alex&num1=5&num2=10', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-4').textContent = data
+	}
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-4').onclick = t4
 
 // Task 5 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-5 результат. Запускаться функция должна по нажатию b-5. */
 
 function t5() {
+let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=5&name=Alex&num1=5&num2=10', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-5').textContent = data
+	}
 
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-5').onclick = t5
 
 // Task 6 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-6 результат. Запускаться функция должна по нажатию b-6. */
 
 function t6() {
+let request = new XMLHttpRequest()
+
+	request.onreadystatechange = function () {
+		if ( this.readyState == 4 && this.status == 200 ) {
+			myFunction(this.responseText)
+		}
+	}
+	request.open('GET', 'http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=6&name=Alex&num1=5&num2=10', true)
+	request.send()
+	
+	function myFunction(data) {
+		document.querySelector('.out-6').textContent = data
+	}
 
 }
 
-// ваше событие здесь!!!
-
+document.querySelector('.b-6').onclick = t6
 
 // Task 7 ============================================
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
