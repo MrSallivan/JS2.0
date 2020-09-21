@@ -231,7 +231,7 @@ document.querySelector('.b-17').onclick = f17;
 function f18() {
 	let p18 = document.querySelector('.p-18')
 	let dataP18 = p18.getAttribute('data-b')
-	document.querySelector('.out-18').innerHTML = dataP18
+	document.querySelector('.out-18').textContent = dataP18
 }
 
 document.querySelector('.b-18').onclick = f18;
