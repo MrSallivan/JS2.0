@@ -1,0 +1,7 @@
+{
+	"vscodeGoogleTranslate.preferredLanguage": "English",
+	"workbench.colorCustomizations": {
+		"editorCursor.foreground": "#ffff00",
+		"terminalCursor.foreground": "#ffff00"
+	}
+}

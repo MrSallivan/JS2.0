@@ -3,18 +3,29 @@
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в out-1 результат. Запускаться функция должна по нажатию b-1. */
 
 function t1() {
+	fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=1')
+		.then(response => response.text())
+		.then(response => {
+			document.querySelector('.out-1').innerHTML = response
+		})
+
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-1').onclick = t1
 
 // Task 2 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция должна по нажатию b-2. */
 
 function t2() {
-
+	fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=2&name=Alex')
+		.then(response => response.text())
+		.then(response => {
+			document.querySelector('.out-2').innerHTML = response
+		})
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-2').onclick = t2
+
 
 
 // Task 3 ============================================
