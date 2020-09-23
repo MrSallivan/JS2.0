@@ -8,9 +8,24 @@
 */
 
 function t1() {
+	const a = new Promise((resolve, reject) => {
+		fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=1')
+			.then(response => {
+				resolve(response.text())
+			})
+	})
+	const b = new Promise((resolve, reject) => {
+		fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=2')
+			.then(response => {
+				resolve(response.text())
+			})
+	})
+	Promise.all([a, b]).then(response => {
+		document.querySelector('.out-1').innerHTML = `query1: ${response[0]} <br> query2: ${response[1]}`
+	})
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-1').onclick = t1
 
 // Task 2 ============================================
 /* 
@@ -26,10 +41,24 @@ function t1() {
 */
 
 function t2() {
-
+	const a = new Promise((resolve, reject) => {
+		fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=3&num1=10&num2=150')
+			.then(response => {
+				resolve(response.text())
+			})
+	})
+	const b = new Promise((resolve, reject) => {
+		fetch('http://getpost.itgid.info/index2.php?auth=5ADcB96BA48d3f80&action=4&num1=10&num2=150')
+			.then(response => {
+				resolve(response.text())
+			})
+	})
+	Promise.all([a, b]).then(response => {
+		document.querySelector('.out-2').innerHTML = `query1: ${response[0]} <br> query2: ${response[1]}`
+	})
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-2').onclick = t2
 
 
 // Task 3 ============================================
