@@ -274,7 +274,10 @@ function t18() {
 		headers: { 'Content-type': 'application/x-www-form-urlencoded' },
 		body: 'auth=5ADcB96BA48d3f80&action=9&name=Alex&num1=10&num2=150&year=1984&m=1&d=1&y=1'
 	})
-		.then(response => response.text())
+		.then(response => {
+			console.log(response.text())
+			return response.text()
+		})
 		.then(response => {
 			out('.out-18', response)
 		})
