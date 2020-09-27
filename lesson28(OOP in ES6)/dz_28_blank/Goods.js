@@ -1,9 +1,9 @@
 class Goods {
 	constructor(a, b, c, d) {
 		this.name = a,
-			this.amount = b,
-			this.image = c,
-			this.count = d
+		this.amount = b,
+		this.image = c,
+		this.count = d
 	}
 	draw(e) {
 		let div = document.createElement('div')

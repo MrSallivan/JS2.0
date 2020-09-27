@@ -25,15 +25,20 @@ goods2.draw('.out-4')
 
 // Task 6.
 // Создайте на основе класса Goods2 объект goods3. Заполните все поля. Выведите товар на страницу с помощью метода draw. Вывод осуществить в out-6.
+
 let goods3 = new Goods2('Iphone11', 500, image[1], 55000, true)
 goods3.draw('.out-6')
- // Task 7.
- // Создайте класс Valid, который содержит свойства email, password, isValid. И метод validate. Метод validate должен проверять длину пароля и писать false в isValid если длина меньше 6 и true если больше. Изначально свойство isValid равно false.
+
+// Task 7.
+// Создайте класс Valid, который содержит свойства email, password, isValid. И метод validate. Метод validate должен проверять длину пароля и писать false в isValid если длина меньше 6 и true если больше. Изначально свойство isValid равно false.
+
 
 
  //Task 8.
  // Создайте объект на основе класса Valid и задайте ему имя и пароль длиной 5 символов. Запустите метод validate() и выведите в консоль свойство isValid.
 
+ let myValid = new Valid('nav@mail.ru', '1sd34')
+ console.log(myValid.isValid)
 
  //Task 9.
  // Создайте объект на основе класса Valid и задайте ему имя и пароль длиной 7 символов. Запустите метод validate() и выведите в консоль свойство isValid.
