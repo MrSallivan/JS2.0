@@ -55,7 +55,7 @@ console.log(myValid2.isValid)
  //Task 11.
  // Создайте на основе класса Valid2 объект valid2 и задайте пустой емейл и длину пароля больше 7. Запустите метод validate(). Выведите объект в консоль.
 
- let valid2 = new Valid2('mail@mail.ru', 'sjougjutyf')
+ let valid2 = new Valid2('', 'sjougjutyf')
  valid2.validate()
  console.log(valid2)
 

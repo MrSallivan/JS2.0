@@ -1,11 +1,11 @@
 class Valid extends Valid2 {
-	constructor( email, password ) {
+	constructor(email, password, emailError = '', passwordError = '' ) {
 		super( email, password )
-		this.emailError = '',
-		this.passwordError = ''
+		this.emailError = mailError,
+		this.passwordError = passwordError
 	}
 	validate() {
-		if ( this.password.length > 6 && this.email != '' ) {
+		if ( (this.password.length) > 6 (&& this.email != '') ) {
 		 	this.isValid = true 
 		} else {
 			this.isValid = false
