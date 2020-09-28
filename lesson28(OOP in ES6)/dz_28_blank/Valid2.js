@@ -9,8 +9,13 @@ class Valid2 extends Valid {
 			this.isValid = true
 		} else {
 			this.isValid = false
-			this.emailError = 'email empty'
-			this.passwordError = 'min length 6'
+			if (this.email == '') {
+				this.emailError = 'email empty'
+			}
+			if (this.password.length < 6) {
+				this.passwordError = 'min length 6'
+			}
+			
 		}
 	}
 }
